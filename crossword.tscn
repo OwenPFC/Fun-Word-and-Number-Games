@@ -1,59 +1,470 @@
-[gd_scene format=3 uid="uid://yt5ryj6bxkfp"]
+[gd_scene load_steps=4 format=3 uid="uid://yt5ryj6bxkfp"]
+
+[ext_resource type="Script" path="res://crossword.gd" id="1_lpbfh"]
+[ext_resource type="Texture2D" uid="uid://gy2b0lnk6r8h" path="res://crossword assets/white.png" id="2_bvd23"]
+[ext_resource type="Texture2D" uid="uid://0w6k1bkkhljb" path="res://crossword assets/crossword base.png" id="2_jn2l3"]
 
 [node name="Crossword" type="Node2D"]
+script = ExtResource("1_lpbfh")
 
 [node name="a" type="LineEdit" parent="."]
-offset_left = 344.0
-offset_top = 70.0
-offset_right = 460.0
-offset_bottom = 154.0
+offset_left = 167.0
+offset_top = 28.0
+offset_right = 305.0
+offset_bottom = 158.0
+focus_neighbor_bottom = NodePath("../b")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="a"]
+show_behind_parent = true
+position = Vector2(71, 62.5)
+scale = Vector2(1, 0.935714)
+texture = ExtResource("2_bvd23")
 
 [node name="b" type="LineEdit" parent="."]
-offset_left = 346.0
-offset_top = 189.0
-offset_right = 462.0
-offset_bottom = 273.0
+offset_left = 168.0
+offset_top = 159.0
+offset_right = 306.0
+offset_bottom = 289.0
+focus_neighbor_bottom = NodePath("../c")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="b"]
+show_behind_parent = true
+position = Vector2(70, 67.25)
+scale = Vector2(1, 0.925)
+texture = ExtResource("2_bvd23")
 
 [node name="c" type="LineEdit" parent="."]
-offset_left = 345.0
-offset_top = 311.0
-offset_right = 461.0
-offset_bottom = 395.0
+offset_left = 169.0
+offset_top = 294.0
+offset_right = 303.0
+offset_bottom = 418.0
+focus_neighbor_right = NodePath("../f")
+focus_neighbor_bottom = NodePath("../d")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="c"]
+show_behind_parent = true
+position = Vector2(69, 66)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
 
 [node name="d" type="LineEdit" parent="."]
-offset_left = 343.0
-offset_top = 422.0
-offset_right = 459.0
-offset_bottom = 506.0
+offset_left = 168.0
+offset_top = 424.0
+offset_right = 304.0
+offset_bottom = 551.0
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="d"]
+show_behind_parent = true
+position = Vector2(68, 65)
+scale = Vector2(0.982014, 0.914286)
+texture = ExtResource("2_bvd23")
 
 [node name="e" type="LineEdit" parent="."]
-offset_left = 346.0
-offset_top = 532.0
-offset_right = 462.0
-offset_bottom = 616.0
+offset_left = 169.0
+offset_top = 557.0
+offset_right = 304.0
+offset_bottom = 686.0
+focus_neighbor_right = NodePath("../c")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="e"]
+show_behind_parent = true
+position = Vector2(68, 63)
+scale = Vector2(1, 0.921429)
+texture = ExtResource("2_bvd23")
 
 [node name="f" type="LineEdit" parent="."]
-offset_left = 509.0
-offset_top = 314.0
-offset_right = 625.0
-offset_bottom = 398.0
+offset_left = 307.0
+offset_top = 293.0
+offset_right = 445.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath("../c")
+focus_neighbor_right = NodePath("../g")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="f"]
+show_behind_parent = true
+position = Vector2(71, 63)
+scale = Vector2(1, 0.892857)
+texture = ExtResource("2_bvd23")
 
 [node name="g" type="LineEdit" parent="."]
-offset_left = 660.0
-offset_top = 318.0
-offset_right = 776.0
-offset_bottom = 402.0
+offset_left = 449.0
+offset_top = 294.0
+offset_right = 584.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
 alignment = 1
 max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="g"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="h" type="LineEdit" parent="."]
+offset_left = 583.0
+offset_top = 294.0
+offset_right = 723.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="h"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="i" type="LineEdit" parent="."]
+offset_left = 310.0
+offset_top = 424.0
+offset_right = 450.0
+offset_bottom = 549.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="i"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="j" type="LineEdit" parent="."]
+offset_left = 449.0
+offset_top = 424.0
+offset_right = 589.0
+offset_bottom = 549.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="j"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="k" type="LineEdit" parent="."]
+offset_left = 583.0
+offset_top = 426.0
+offset_right = 723.0
+offset_bottom = 551.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="k"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="l" type="LineEdit" parent="."]
+offset_left = 310.0
+offset_top = 558.0
+offset_right = 450.0
+offset_bottom = 683.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="l"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="m" type="LineEdit" parent="."]
+offset_left = 450.0
+offset_top = 556.0
+offset_right = 590.0
+offset_bottom = 681.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="m"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="n" type="LineEdit" parent="."]
+offset_left = 34.0
+offset_top = 557.0
+offset_right = 174.0
+offset_bottom = 682.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="n"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="o" type="LineEdit" parent="."]
+offset_left = 33.0
+offset_top = 423.0
+offset_right = 173.0
+offset_bottom = 548.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="o"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="p" type="LineEdit" parent="."]
+offset_left = 33.0
+offset_top = 294.0
+offset_right = 173.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="p"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="q" type="LineEdit" parent="."]
+offset_left = 33.0
+offset_top = 164.0
+offset_right = 173.0
+offset_bottom = 289.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="q"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="r" type="LineEdit" parent="."]
+offset_left = 311.0
+offset_top = 30.0
+offset_right = 451.0
+offset_bottom = 155.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="r"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="s" type="LineEdit" parent="."]
+offset_left = 310.0
+offset_top = 164.0
+offset_right = 450.0
+offset_bottom = 289.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="s"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="t" type="LineEdit" parent="."]
+offset_left = 451.0
+offset_top = 29.0
+offset_right = 591.0
+offset_bottom = 154.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="t"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="u" type="LineEdit" parent="."]
+offset_left = 452.0
+offset_top = 164.0
+offset_right = 592.0
+offset_bottom = 289.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="u"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="v" type="LineEdit" parent="."]
+offset_left = 584.0
+offset_top = 28.0
+offset_right = 724.0
+offset_bottom = 153.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="v"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="w" type="LineEdit" parent="."]
+offset_left = 586.0
+offset_top = 160.0
+offset_right = 726.0
+offset_bottom = 285.0
+focus_neighbor_left = NodePath("../f")
+focus_neighbor_bottom = NodePath("../e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="w"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="CrosswordBase" type="Sprite2D" parent="."]
+position = Vector2(387, 366)
+scale = Vector2(1.92012, 1.81273)
+texture = ExtResource("2_jn2l3")

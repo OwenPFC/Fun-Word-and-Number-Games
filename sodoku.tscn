@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://carhxhqbqisa0"]
+[gd_scene load_steps=5 format=3 uid="uid://d0ouwcg1gdhaj"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
 [ext_resource type="Texture2D" uid="uid://uwuprxsuuajl" path="res://assets/Screenshot 2025-04-19 144519.png" id="2_427kp"]
