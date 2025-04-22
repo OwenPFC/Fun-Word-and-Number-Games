@@ -12,3 +12,4 @@ func _process(delta):
 	#position = pos
 	if $SodokuBoard.pos.x >2000:
 		$SodokuBoard.pos.x = 0
+#that's wierd
