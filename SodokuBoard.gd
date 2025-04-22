@@ -3,6 +3,16 @@ extends Sprite2D
 var pos: Vector2 = Vector2.ZERO
 const speed: int = 40
 var test_scale = 1
+var adjacencyList = {"(0,3)": ["", "(2,4)", "(0,7)", "(1,2)"]}
+var currentNode = null
+var correctGame: bool = false
+
+#var dict_variable_key = "Another key name"
+#var dict_variable_value = "value2"
+#var another_dict = {
+	#"Some key name": "value1",
+	#dict_variable_key: dict_variable_value,
+#}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,3 +29,8 @@ func _process(delta):
 	
 	#test_scale += 1
 	#scale = Vector2(test_scale, test_scale)
+
+
+func _on__text_changed():
+	if(Input.is_action_pressed("left")):
+		currentNode = adjacencyList.find_key(currentNode).get(0)

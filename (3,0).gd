@@ -1,15 +1,14 @@
-extends LineEdit
-var mouse_entered1 = false
+extends TextEdit
+var gameCorrect = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$TextEdit.text = " ";
+	pass
+	#$TextEdit.text = " ";
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#clicking
-	if(mouse_entered1):
-		pass
-
-func _on_mouse_entered():
-	mouse_entered1 = true
+	if($TextEdit.text.equals("I")):
+		gameCorrect=true
+		
+	

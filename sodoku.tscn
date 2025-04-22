@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0ouwcg1gdhaj"]
+[gd_scene load_steps=19 format=3 uid="uid://carhxhqbqisa0"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
-[ext_resource type="Texture2D" uid="uid://uwuprxsuuajl" path="res://assets/Screenshot 2025-04-19 144519.png" id="2_427kp"]
+[ext_resource type="Texture2D" uid="uid://bnk51tvs5chki" path="res://sodoku assets/Screenshot 2025-04-20 144617.png" id="2_m82fv"]
 [ext_resource type="Script" path="res://SodokuBoard.gd" id="3_xrgyb"]
-[ext_resource type="Script" path="res://TextEdit.gd" id="5_gy2k7"]
+[ext_resource type="Script" path="res://(6,4).gd" id="4_rrnty"]
+[ext_resource type="Script" path="res://(4,5).gd" id="5_u6gub"]
+[ext_resource type="Script" path="res://(0,3).gd" id="6_ha6uo"]
+[ext_resource type="Script" path="res://(2,4).gd" id="7_pd234"]
+[ext_resource type="Script" path="res://(7,3).gd" id="8_rxxnu"]
+[ext_resource type="Script" path="res://(4,7).gd" id="9_u7s3g"]
+[ext_resource type="Script" path="res://(4,2).gd" id="10_axng2"]
+[ext_resource type="Script" path="res://(1,2).gd" id="11_dj4si"]
+[ext_resource type="Script" path="res://(1,0).gd" id="12_4rh0y"]
+[ext_resource type="Script" path="res://(6,2).gd" id="13_qrq5j"]
+[ext_resource type="Script" path="res://(3,0).gd" id="14_vg2qu"]
+[ext_resource type="Script" path="res://(0,7).gd" id="15_v5k8q"]
+[ext_resource type="Script" path="res://(8,0).gd" id="16_his0j"]
+[ext_resource type="Script" path="res://(0,8).gd" id="17_fxcys"]
+[ext_resource type="Script" path="res://(4,4).gd" id="18_nl8w5"]
 
 [node name="Sodoku" type="Node2D"]
 script = ExtResource("1_ise78")
@@ -11,7 +25,7 @@ script = ExtResource("1_ise78")
 [node name="SodokuBoard" type="Sprite2D" parent="."]
 position = Vector2(3, -13)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_427kp")
+texture = ExtResource("2_m82fv")
 script = ExtResource("3_xrgyb")
 
 [node name="(6,4)" type="TextEdit" parent="SodokuBoard"]
@@ -20,53 +34,23 @@ offset_top = -34.0
 offset_right = 199.0
 offset_bottom = 31.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("4_rrnty")
 
-[node name="(3,4)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -116.0
-offset_top = -34.0
-offset_right = -46.0
-offset_bottom = 30.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit3" type="TextEdit" parent="SodokuBoard"]
+[node name="(4,5)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -36.0
 offset_top = 42.0
 offset_right = 34.0
 offset_bottom = 106.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit4" type="TextEdit" parent="SodokuBoard"]
-offset_left = -116.0
-offset_top = 42.0
-offset_right = -46.0
-offset_bottom = 106.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit5" type="TextEdit" parent="SodokuBoard"]
-offset_left = 44.0
-offset_top = 40.0
-offset_right = 114.0
-offset_bottom = 104.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(0,4)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -356.0
-offset_top = -34.0
-offset_right = -286.0
-offset_bottom = 30.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("5_u6gub")
 
 [node name="(0,3)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -358.0
@@ -74,62 +58,35 @@ offset_top = -106.0
 offset_right = -288.0
 offset_bottom = -42.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("6_ha6uo")
 
 [node name="(2,4)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -198.0
-offset_top = -36.0
-offset_right = -128.0
-offset_bottom = 28.0
+offset_left = -200.0
+offset_top = -30.0
+offset_right = -130.0
+offset_bottom = 34.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("7_pd234")
 
-[node name="TextEdit9" type="TextEdit" parent="SodokuBoard"]
-offset_left = -198.0
-offset_top = -108.0
-offset_right = -128.0
-offset_bottom = -44.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit10" type="TextEdit" parent="SodokuBoard"]
-offset_left = 44.0
+[node name="(7,3)" type="TextEdit" parent="SodokuBoard"]
+offset_left = 202.0
 offset_top = -110.0
-offset_right = 114.0
+offset_right = 272.0
 offset_bottom = -46.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit11" type="TextEdit" parent="SodokuBoard"]
-offset_left = 206.0
-offset_top = -34.0
-offset_right = 276.0
-offset_bottom = 30.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(8,4)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 284.0
-offset_top = -34.0
-offset_right = 354.0
-offset_bottom = 30.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit13" type="TextEdit" parent="SodokuBoard"]
-offset_left = 212.0
-offset_top = -108.0
-offset_right = 282.0
-offset_bottom = -44.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("8_rxxnu")
 
 [node name="(4,7)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -38.0
@@ -137,35 +94,23 @@ offset_top = 202.0
 offset_right = 32.0
 offset_bottom = 266.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("9_u7s3g")
 
-[node name="TextEdit15" type="TextEdit" parent="SodokuBoard"]
+[node name="(4,2)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -38.0
 offset_top = -190.0
 offset_right = 32.0
 offset_bottom = -126.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(3,2)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -116.0
-offset_top = -190.0
-offset_right = -46.0
-offset_bottom = -126.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit17" type="TextEdit" parent="SodokuBoard"]
-offset_left = -200.0
-offset_top = -266.0
-offset_right = -130.0
-offset_bottom = -202.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("10_axng2")
 
 [node name="(1,2)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -280.0
@@ -173,17 +118,11 @@ offset_top = -190.0
 offset_right = -210.0
 offset_bottom = -126.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(1,1)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -278.0
-offset_top = -266.0
-offset_right = -208.0
-offset_bottom = -202.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("11_dj4si")
 
 [node name="(1,0)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -278.0
@@ -191,44 +130,25 @@ offset_top = -342.0
 offset_right = -208.0
 offset_bottom = -278.0
 rotation = 0.00450947
+focus_neighbor_right = NodePath("../(3,0)")
+focus_neighbor_bottom = NodePath("../(1,2)")
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("12_4rh0y")
 
-[node name="TextEdit21" type="TextEdit" parent="SodokuBoard"]
+[node name="(6,2)" type="TextEdit" parent="SodokuBoard"]
 offset_left = 128.0
 offset_top = -190.0
 offset_right = 198.0
 offset_bottom = -126.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit22" type="TextEdit" parent="SodokuBoard"]
-offset_left = 126.0
-offset_top = -264.0
-offset_right = 196.0
-offset_bottom = -200.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(5,0)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 44.0
-offset_top = -338.0
-offset_right = 114.0
-offset_bottom = -274.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(4,1)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -36.0
-offset_top = -266.0
-offset_right = 34.0
-offset_bottom = -202.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("13_qrq5j")
 
 [node name="(3,0)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -116.0
@@ -236,8 +156,13 @@ offset_top = -340.0
 offset_right = -46.0
 offset_bottom = -276.0
 rotation = 0.00450947
+focus_neighbor_left = NodePath("../(1,0)")
+focus_neighbor_top = NodePath("../(8,0)")
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("14_vg2qu")
 
 [node name="(0,7)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -358.0
@@ -245,26 +170,11 @@ offset_top = 198.0
 offset_right = -288.0
 offset_bottom = 262.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit27" type="TextEdit" parent="SodokuBoard"]
-offset_left = 206.0
-offset_top = 38.0
-offset_right = 276.0
-offset_bottom = 102.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit28" type="TextEdit" parent="SodokuBoard"]
-offset_left = 124.0
-offset_top = 42.0
-offset_right = 194.0
-offset_bottom = 106.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("15_v5k8q")
 
 [node name="(8,0)" type="TextEdit" parent="SodokuBoard"]
 offset_left = 288.0
@@ -272,53 +182,11 @@ offset_top = -342.0
 offset_right = 358.0
 offset_bottom = -278.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="TextEdit30" type="TextEdit" parent="SodokuBoard"]
-offset_left = 206.0
-offset_top = -190.0
-offset_right = 276.0
-offset_bottom = -126.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(3,6)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -116.0
-offset_top = 122.0
-offset_right = -46.0
-offset_bottom = 186.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(1,7)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -274.0
-offset_top = 194.0
-offset_right = -204.0
-offset_bottom = 258.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(2,6)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -196.0
-offset_top = 120.0
-offset_right = -126.0
-offset_bottom = 184.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(2,8)" type="TextEdit" parent="SodokuBoard"]
-offset_left = -192.0
-offset_top = 274.0
-offset_right = -122.0
-offset_bottom = 338.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("16_his0j")
 
 [node name="(0,8)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -358.0
@@ -326,17 +194,23 @@ offset_top = 276.0
 offset_right = -288.0
 offset_bottom = 340.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("17_fxcys")
 
-[node name="(4," type="TextEdit" parent="SodokuBoard"]
+[node name="(4,4)" type="TextEdit" parent="SodokuBoard"]
 offset_left = -38.0
 offset_top = -34.0
 offset_right = 32.0
 offset_bottom = 30.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
+script = ExtResource("18_nl8w5")
 
 [node name="(8,7)" type="TextEdit" parent="SodokuBoard"]
 offset_left = 284.0
@@ -344,8 +218,10 @@ offset_top = 198.0
 offset_right = 354.0
 offset_bottom = 262.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
 
 [node name="(7,6)" type="TextEdit" parent="SodokuBoard"]
 offset_left = 208.0
@@ -353,50 +229,9 @@ offset_top = 120.0
 offset_right = 278.0
 offset_bottom = 184.0
 rotation = 0.00450947
+theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+scroll_fit_content_height = true
 
-[node name="(6,6)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 126.0
-offset_top = 120.0
-offset_right = 196.0
-offset_bottom = 184.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(5,7)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 46.0
-offset_top = 198.0
-offset_right = 116.0
-offset_bottom = 262.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(7,8)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 208.0
-offset_top = 278.0
-offset_right = 278.0
-offset_bottom = 342.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(6,8)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 126.0
-offset_top = 278.0
-offset_right = 196.0
-offset_bottom = 342.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
-
-[node name="(8,8)" type="TextEdit" parent="SodokuBoard"]
-offset_left = 286.0
-offset_top = 274.0
-offset_right = 356.0
-offset_bottom = 338.0
-rotation = 0.00450947
-theme_override_font_sizes/font_size = 40
-script = ExtResource("5_gy2k7")
+[connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard" method="_on__text_changed"]
