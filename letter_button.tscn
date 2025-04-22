@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://ch45hrbr0jp76"]
+
+[ext_resource type="Script" path="res://letter_button.gd" id="1_ke637"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fr57"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gh7sr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xottb"]
+texture = SubResource("CanvasTexture_gh7sr")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.25098)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xp2ee"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ua34n"]
+texture = SubResource("CanvasTexture_xp2ee")
+modulate_color = Color(0.356189, 0.357496, 0.896946, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hk3kk"]
+
+[node name="letter_button" type="Button"]
+offset_left = -37.0
+offset_top = -34.0
+offset_right = 36.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_8fr57")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xottb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ua34n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hk3kk")
+script = ExtResource("1_ke637")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
