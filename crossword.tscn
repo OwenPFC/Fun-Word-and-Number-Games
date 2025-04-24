@@ -1,18 +1,109 @@
-[gd_scene load_steps=4 format=3 uid="uid://yt5ryj6bxkfp"]
+[gd_scene load_steps=9 format=3 uid="uid://dw3nfvj0nuha6"]
 
 [ext_resource type="Script" path="res://crossword.gd" id="1_lpbfh"]
+[ext_resource type="Texture2D" uid="uid://utremklxs51v" path="res://crossword assets/LOL.png" id="2_bnbno"]
 [ext_resource type="Texture2D" uid="uid://gy2b0lnk6r8h" path="res://crossword assets/white.png" id="2_bvd23"]
 [ext_resource type="Texture2D" uid="uid://0w6k1bkkhljb" path="res://crossword assets/crossword base.png" id="2_jn2l3"]
+[ext_resource type="Texture2D" uid="uid://c32jscse67k3d" path="res://crossword assets/big red x.png" id="3_7xt00"]
+[ext_resource type="Texture2D" uid="uid://cmg6hep57e2vm" path="res://crossword assets/woodrow.png" id="4_17642"]
+[ext_resource type="Texture2D" uid="uid://c8nbwa53xlqfs" path="res://crossword assets/finger.png" id="5_d2pyo"]
+[ext_resource type="Texture2D" uid="uid://db4uwvvebosbc" path="res://word search assets/crying glorp.png" id="6_ga4e3"]
 
 [node name="Crossword" type="Node2D"]
 script = ExtResource("1_lpbfh")
 
-[node name="a" type="LineEdit" parent="."]
+[node name="quit" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 814.0
+offset_right = 524.0
+offset_bottom = 875.0
+text = "QUIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="quit"]
+visible = false
+position = Vector2(288, 30)
+scale = Vector2(0.360324, 0.349505)
+texture = ExtResource("2_bnbno")
+
+[node name="Sprite2D2" type="Sprite2D" parent="quit"]
+visible = false
+position = Vector2(-10, 24)
+scale = Vector2(0.374494, 0.367327)
+texture = ExtResource("2_bnbno")
+flip_h = true
+
+[node name="quitScreen" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(1406.74, 411)
+scale = Vector2(0.985649, 0.936151)
+texture = ExtResource("3_7xt00")
+
+[node name="woodrow" type="Sprite2D" parent="quitScreen"]
+position = Vector2(182.884, 19.2277)
+scale = Vector2(1.33473, 1.23708)
+texture = ExtResource("4_17642")
+
+[node name="point" type="Sprite2D" parent="quitScreen/woodrow"]
+position = Vector2(-97.0667, 56.1266)
+scale = Vector2(0.432986, 0.352896)
+texture = ExtResource("5_d2pyo")
+
+[node name="exit" type="Button" parent="quitScreen"]
+offset_left = -186.804
+offset_top = 265.983
+offset_right = 79.1962
+offset_bottom = 328.983
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "QUIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="quitScreen/exit"]
+visible = false
+position = Vector2(-277.601, -319.393)
+texture = ExtResource("6_ga4e3")
+
+[node name="Label" type="Label" parent="quitScreen"]
+offset_left = -40.0778
+offset_top = -106.656
+offset_right = -0.0778198
+offset_bottom = -83.6562
+
+[node name="return" type="Button" parent="quitScreen"]
+offset_left = -354.023
+offset_top = 134.594
+offset_right = 333.977
+offset_bottom = 252.594
+theme_override_font_sizes/font_size = 80
+disabled = true
+text = "Don't be a quitter
+"
+
+[node name="h" type="LineEdit" parent="."]
 offset_left = 167.0
 offset_top = 28.0
-offset_right = 305.0
+offset_right = 307.0
 offset_bottom = 158.0
-focus_neighbor_bottom = NodePath("../b")
+focus_neighbor_bottom = NodePath("../a")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="h"]
+show_behind_parent = true
+position = Vector2(71, 62.5)
+scale = Vector2(1, 0.935714)
+texture = ExtResource("2_bvd23")
+
+[node name="a" type="LineEdit" parent="."]
+offset_left = 168.0
+offset_top = 159.0
+offset_right = 308.0
+offset_bottom = 289.0
+focus_neighbor_bottom = NodePath("../t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -22,36 +113,17 @@ flat = true
 
 [node name="color" type="Sprite2D" parent="a"]
 show_behind_parent = true
-position = Vector2(71, 62.5)
-scale = Vector2(1, 0.935714)
-texture = ExtResource("2_bvd23")
-
-[node name="b" type="LineEdit" parent="."]
-offset_left = 168.0
-offset_top = 159.0
-offset_right = 306.0
-offset_bottom = 289.0
-focus_neighbor_bottom = NodePath("../c")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="b"]
-show_behind_parent = true
 position = Vector2(70, 67.25)
 scale = Vector2(1, 0.925)
 texture = ExtResource("2_bvd23")
 
-[node name="c" type="LineEdit" parent="."]
+[node name="l2" type="LineEdit" parent="."]
 offset_left = 169.0
 offset_top = 294.0
-offset_right = 303.0
+offset_right = 309.0
 offset_bottom = 418.0
-focus_neighbor_right = NodePath("../f")
-focus_neighbor_bottom = NodePath("../d")
+focus_neighbor_right = NodePath("../a")
+focus_neighbor_bottom = NodePath("../t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -59,18 +131,18 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="c"]
+[node name="color" type="Sprite2D" parent="l2"]
 show_behind_parent = true
 position = Vector2(69, 66)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="d" type="LineEdit" parent="."]
+[node name="l3" type="LineEdit" parent="."]
 offset_left = 168.0
 offset_top = 424.0
-offset_right = 304.0
+offset_right = 308.0
 offset_bottom = 551.0
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -78,18 +150,18 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="d"]
+[node name="color" type="Sprite2D" parent="l3"]
 show_behind_parent = true
 position = Vector2(68, 65)
 scale = Vector2(0.982014, 0.914286)
 texture = ExtResource("2_bvd23")
 
-[node name="e" type="LineEdit" parent="."]
+[node name="o3" type="LineEdit" parent="."]
 offset_left = 169.0
 offset_top = 557.0
-offset_right = 304.0
+offset_right = 309.0
 offset_bottom = 686.0
-focus_neighbor_right = NodePath("../c")
+focus_neighbor_right = NodePath("../t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -97,20 +169,20 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="e"]
+[node name="color" type="Sprite2D" parent="o3"]
 show_behind_parent = true
 position = Vector2(68, 63)
 scale = Vector2(1, 0.921429)
 texture = ExtResource("2_bvd23")
 
-[node name="f" type="LineEdit" parent="."]
+[node name="g2" type="LineEdit" parent="."]
 offset_left = 307.0
 offset_top = 293.0
-offset_right = 445.0
+offset_right = 447.0
 offset_bottom = 419.0
-focus_neighbor_left = NodePath("../c")
-focus_neighbor_right = NodePath("../g")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath("../t")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -118,19 +190,159 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="f"]
+[node name="color" type="Sprite2D" parent="g2"]
 show_behind_parent = true
 position = Vector2(71, 63)
 scale = Vector2(1, 0.892857)
 texture = ExtResource("2_bvd23")
 
-[node name="g" type="LineEdit" parent="."]
+[node name="a2" type="LineEdit" parent="."]
 offset_left = 449.0
 offset_top = 294.0
-offset_right = 584.0
+offset_right = 589.0
 offset_bottom = 419.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath(".")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="a2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="e2" type="LineEdit" parent="."]
+offset_left = 583.0
+offset_top = 294.0
+offset_right = 723.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="e2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="o2" type="LineEdit" parent="."]
+offset_left = 310.0
+offset_top = 424.0
+offset_right = 450.0
+offset_bottom = 549.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="o2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="r2" type="LineEdit" parent="."]
+offset_left = 449.0
+offset_top = 424.0
+offset_right = 589.0
+offset_bottom = 549.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="r2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="p2" type="LineEdit" parent="."]
+offset_left = 583.0
+offset_top = 426.0
+offset_right = 723.0
+offset_bottom = 551.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="p2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="t2" type="LineEdit" parent="."]
+offset_left = 310.0
+offset_top = 558.0
+offset_right = 450.0
+offset_bottom = 683.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="t2"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="y" type="LineEdit" parent="."]
+offset_left = 450.0
+offset_top = 556.0
+offset_right = 590.0
+offset_bottom = 681.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 1
+flat = true
+
+[node name="color" type="Sprite2D" parent="y"]
+show_behind_parent = true
+position = Vector2(66, 62)
+scale = Vector2(1, 0.907143)
+texture = ExtResource("2_bvd23")
+
+[node name="g" type="LineEdit" parent="."]
+offset_left = 34.0
+offset_top = 557.0
+offset_right = 174.0
+offset_bottom = 682.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath(".")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -144,13 +356,13 @@ position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="h" type="LineEdit" parent="."]
-offset_left = 583.0
-offset_top = 294.0
-offset_right = 723.0
-offset_bottom = 419.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+[node name="g3" type="LineEdit" parent="."]
+offset_left = 33.0
+offset_top = 423.0
+offset_right = 173.0
+offset_bottom = 548.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath(".")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -158,19 +370,19 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="h"]
+[node name="color" type="Sprite2D" parent="g3"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="i" type="LineEdit" parent="."]
-offset_left = 310.0
-offset_top = 424.0
-offset_right = 450.0
-offset_bottom = 549.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+[node name="a3" type="LineEdit" parent="."]
+offset_left = 33.0
+offset_top = 294.0
+offset_right = 173.0
+offset_bottom = 419.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -178,19 +390,19 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="i"]
+[node name="color" type="Sprite2D" parent="a3"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
 [node name="j" type="LineEdit" parent="."]
-offset_left = 449.0
-offset_top = 424.0
-offset_right = 589.0
-offset_bottom = 549.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+offset_left = 33.0
+offset_top = 164.0
+offset_right = 173.0
+offset_bottom = 289.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -204,13 +416,13 @@ position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="k" type="LineEdit" parent="."]
-offset_left = 583.0
-offset_top = 426.0
-offset_right = 723.0
-offset_bottom = 551.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+[node name="i" type="LineEdit" parent="."]
+offset_left = 311.0
+offset_top = 30.0
+offset_right = 451.0
+offset_bottom = 155.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -218,59 +430,19 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="k"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="l" type="LineEdit" parent="."]
-offset_left = 310.0
-offset_top = 558.0
-offset_right = 450.0
-offset_bottom = 683.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="l"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="m" type="LineEdit" parent="."]
-offset_left = 450.0
-offset_top = 556.0
-offset_right = 590.0
-offset_bottom = 681.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="m"]
+[node name="color" type="Sprite2D" parent="i"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
 [node name="n" type="LineEdit" parent="."]
-offset_left = 34.0
-offset_top = 557.0
-offset_right = 174.0
-offset_bottom = 682.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+offset_left = 310.0
+offset_top = 164.0
+offset_right = 450.0
+offset_bottom = 289.0
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -284,113 +456,13 @@ position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="o" type="LineEdit" parent="."]
-offset_left = 33.0
-offset_top = 423.0
-offset_right = 173.0
-offset_bottom = 548.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="o"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="p" type="LineEdit" parent="."]
-offset_left = 33.0
-offset_top = 294.0
-offset_right = 173.0
-offset_bottom = 419.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="p"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="q" type="LineEdit" parent="."]
-offset_left = 33.0
-offset_top = 164.0
-offset_right = 173.0
-offset_bottom = 289.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="q"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="r" type="LineEdit" parent="."]
-offset_left = 311.0
-offset_top = 30.0
-offset_right = 451.0
-offset_bottom = 155.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="r"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
-[node name="s" type="LineEdit" parent="."]
-offset_left = 310.0
-offset_top = 164.0
-offset_right = 450.0
-offset_bottom = 289.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-alignment = 1
-max_length = 1
-flat = true
-
-[node name="color" type="Sprite2D" parent="s"]
-show_behind_parent = true
-position = Vector2(66, 62)
-scale = Vector2(1, 0.907143)
-texture = ExtResource("2_bvd23")
-
 [node name="t" type="LineEdit" parent="."]
 offset_left = 451.0
 offset_top = 29.0
 offset_right = 591.0
 offset_bottom = 154.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -404,13 +476,13 @@ position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="u" type="LineEdit" parent="."]
+[node name="e" type="LineEdit" parent="."]
 offset_left = 452.0
 offset_top = 164.0
 offset_right = 592.0
 offset_bottom = 289.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -418,19 +490,19 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="u"]
+[node name="color" type="Sprite2D" parent="e"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="v" type="LineEdit" parent="."]
+[node name="s" type="LineEdit" parent="."]
 offset_left = 584.0
 offset_top = 28.0
 offset_right = 724.0
 offset_bottom = 153.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -438,19 +510,19 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="v"]
+[node name="color" type="Sprite2D" parent="s"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
 texture = ExtResource("2_bvd23")
 
-[node name="w" type="LineEdit" parent="."]
+[node name="t3" type="LineEdit" parent="."]
 offset_left = 586.0
 offset_top = 160.0
 offset_right = 726.0
 offset_bottom = 285.0
-focus_neighbor_left = NodePath("../f")
-focus_neighbor_bottom = NodePath("../e")
+focus_neighbor_left = NodePath("../a")
+focus_neighbor_bottom = NodePath("../g")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -458,7 +530,7 @@ alignment = 1
 max_length = 1
 flat = true
 
-[node name="color" type="Sprite2D" parent="w"]
+[node name="color" type="Sprite2D" parent="t3"]
 show_behind_parent = true
 position = Vector2(66, 62)
 scale = Vector2(1, 0.907143)
@@ -468,3 +540,13 @@ texture = ExtResource("2_bvd23")
 position = Vector2(387, 366)
 scale = Vector2(1.92012, 1.81273)
 texture = ExtResource("2_jn2l3")
+
+[connection signal="mouse_entered" from="quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="quitScreen/exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="quitScreen/exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="quitScreen/exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="quitScreen/return" to="." method="_on_return_mouse_entered"]
+[connection signal="mouse_exited" from="quitScreen/return" to="." method="_on_return_mouse_exited"]
+[connection signal="pressed" from="quitScreen/return" to="." method="_on_return_pressed"]

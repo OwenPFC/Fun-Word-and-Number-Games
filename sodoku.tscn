@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://carhxhqbqisa0"]
+[gd_scene load_steps=21 format=3 uid="uid://cmp2gh8uvu3pn"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
 [ext_resource type="Texture2D" uid="uid://bbfyvnc3ee3jj" path="res://sodoku assets/better better easier board.png" id="2_encrp"]

@@ -1,31 +1,51 @@
-[gd_scene load_steps=18 format=3 uid="uid://d24dh0e603eds"]
+[gd_scene load_steps=38 format=3 uid="uid://b2f36kn3ye6ae"]
 
-[ext_resource type="PackedScene" path="res://letter_button.tscn" id="2_bw4ay"]
-[ext_resource type="PackedScene" path="res://non_word_button.tscn" id="3_kpad2"]
+[ext_resource type="Script" path="res://wordsearch.gd" id="1_08m1n"]
+[ext_resource type="Texture2D" uid="uid://botpdrex1ey10" path="res://word search assets/crossword base.png" id="2_6qs8d"]
+[ext_resource type="PackedScene" uid="uid://ch45hrbr0jp76" path="res://letter_button.tscn" id="2_bw4ay"]
+[ext_resource type="PackedScene" uid="uid://dkgd4863t8pnb" path="res://non_word_button.tscn" id="3_kpad2"]
+[ext_resource type="Texture2D" uid="uid://4hktsjlv4y5c" path="res://word search assets/download.png" id="4_1jl8v"]
+[ext_resource type="Texture2D" uid="uid://jo4bpp33hquj" path="res://word search assets/explosion/1.png" id="5_a1nqu"]
+[ext_resource type="Texture2D" uid="uid://do1qb13lb4tb8" path="res://word search assets/explosion/2.png" id="6_6k3um"]
+[ext_resource type="Texture2D" uid="uid://cm608wjtkdv5q" path="res://word search assets/explosion/3.png" id="7_3ecja"]
+[ext_resource type="Texture2D" uid="uid://1vxv8xsi4r4d" path="res://word search assets/explosion/4.png" id="8_atsiq"]
+[ext_resource type="Texture2D" uid="uid://c4f3q52v8dbw4" path="res://word search assets/explosion/5.png" id="9_nho86"]
+[ext_resource type="Texture2D" uid="uid://cxoio8611piww" path="res://word search assets/explosion/6.png" id="10_c40n4"]
+[ext_resource type="Texture2D" uid="uid://cw0bs43r8l426" path="res://word search assets/explosion/7.png" id="11_x8es1"]
+[ext_resource type="Texture2D" uid="uid://dmdworudbnqjs" path="res://word search assets/explosion/8.png" id="12_vqgdj"]
+[ext_resource type="Texture2D" uid="uid://cghgnfb405cbb" path="res://word search assets/explosion/9.png" id="13_ptgnq"]
+[ext_resource type="Texture2D" uid="uid://d1dxcvxchpagk" path="res://word search assets/explosion/10.png" id="14_ovfkl"]
+[ext_resource type="Texture2D" uid="uid://bfh7kbuwvubuo" path="res://word search assets/explosion/11.png" id="15_sdae5"]
+[ext_resource type="Texture2D" uid="uid://c4k5nk7llgvek" path="res://word search assets/explosion/12.png" id="16_plqwv"]
+[ext_resource type="Texture2D" uid="uid://cy2rvtp3rec5x" path="res://word search assets/explosion/13.png" id="17_fji3b"]
+[ext_resource type="Texture2D" uid="uid://s3u6gwklgnq3" path="res://word search assets/explosion/14.png" id="18_phxde"]
+[ext_resource type="Texture2D" uid="uid://b7ypm42lx0ofo" path="res://word search assets/explosion/15.png" id="19_y6u5s"]
+[ext_resource type="Texture2D" uid="uid://ctw1poeyox17s" path="res://word search assets/explosion/16.png" id="20_lh2v4"]
+[ext_resource type="Texture2D" uid="uid://bus0lhd1lmc1r" path="res://crossword assets/blue.png" id="22_42xi5"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qooky"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3jv5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2yv1"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dcfy"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qdjq"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxlei"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugni2"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_voqk1"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81fen"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrlyf"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bvr66"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vuue"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77es6"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
@@ -47,52 +67,52 @@ texture = SubResource("CanvasTexture_qooky")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("5_a1nqu")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("6_6k3um")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("7_3ecja")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("8_atsiq")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("9_nho86")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("10_c40n4")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("11_x8es1")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("12_vqgdj")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("13_ptgnq")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("14_ovfkl")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("15_sdae5")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("16_plqwv")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("17_fji3b")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("18_phxde")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("19_y6u5s")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("20_lh2v4")
 }],
 "loop": false,
 "name": &"explosion",
@@ -100,19 +120,21 @@ animations = [{
 }]
 
 [node name="wordsearch" type="Node2D"]
+script = ExtResource("1_08m1n")
 metadata/_edit_horizontal_guides_ = [-349.0, 83.0]
-metadata/_edit_vertical_guides_ = [1913.0, 458.0, 526.0, 587.0, 643.0, 698.0, 757.0, 825.0, 884.0, 960.0, 1040.0, 1133.0, 1142.0]
+metadata/_edit_vertical_guides_ = [1913.0, 458.0, 526.0, 587.0, 643.0, 698.0, 757.0, 825.0, 884.0, 960.0, 1040.0, 1133.0, 1142.0, 1017.0]
 
 [node name="CrosswordBase" type="Sprite2D" parent="."]
-position = Vector2(716.25, 476.75)
+position = Vector2(565.25, 477.75)
 scale = Vector2(1.07597, 1.57249)
+texture = ExtResource("2_6qs8d")
 
 [node name="g" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -458.424
 offset_top = -296.823
 offset_right = -412.424
 offset_bottom = -213.823
-theme_override_styles/normal = SubResource("StyleBoxTexture_k3jv5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_w2yv1")
 text = "G"
 
 [node name="y" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -135,7 +157,7 @@ offset_left = -264.624
 offset_top = -295.622
 offset_right = -214.624
 offset_bottom = -212.622
-theme_override_styles/normal = SubResource("StyleBoxTexture_4dcfy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3qdjq")
 text = "B"
 
 [node name="r" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -143,7 +165,7 @@ offset_left = -203.836
 offset_top = -296.709
 offset_right = -153.836
 offset_bottom = -213.709
-theme_override_styles/normal = SubResource("StyleBoxTexture_lxlei")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ugni2")
 text = "R"
 
 [node name="e" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -151,7 +173,7 @@ offset_left = -147.2
 offset_top = -296.073
 offset_right = -97.2002
 offset_bottom = -213.073
-theme_override_styles/normal = SubResource("StyleBoxTexture_voqk1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_81fen")
 text = "E"
 
 [node name="d2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -159,7 +181,7 @@ offset_left = -88.5648
 offset_top = -296.801
 offset_right = -38.5648
 offset_bottom = -213.801
-theme_override_styles/normal = SubResource("StyleBoxTexture_rrlyf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bvr66")
 text = "D"
 
 [node name="i" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -181,36 +203,8 @@ offset_left = 79.5879
 offset_top = -295.437
 offset_right = 129.588
 offset_bottom = -212.437
-theme_override_styles/normal = SubResource("StyleBoxTexture_2vuue")
+theme_override_styles/normal = SubResource("StyleBoxTexture_77es6")
 text = "P"
-
-[node name="j" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = 140.223
-offset_top = -298.267
-offset_right = 177.223
-offset_bottom = -215.267
-text = "J"
-
-[node name="r2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = 207.023
-offset_top = -294.279
-offset_right = 245.023
-offset_bottom = -211.279
-text = "R"
-
-[node name="y2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = 272.282
-offset_top = -293.175
-offset_right = 309.282
-offset_bottom = -210.175
-text = "Y"
-
-[node name="d3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = 332.33
-offset_top = -294.447
-offset_right = 376.33
-offset_bottom = -211.447
-text = "D"
 
 [node name="r3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -477.012
@@ -269,20 +263,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "D
 "
 
-[node name="g2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -460.283
-offset_top = 216.377
-offset_right = -416.283
-offset_bottom = 299.377
-text = "G"
-
-[node name="c2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -455.636
-offset_top = 151.512
-offset_right = -417.636
-offset_bottom = 234.512
-text = "C"
-
 [node name="u" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -402.661
 offset_top = -244.676
@@ -315,41 +295,6 @@ offset_right = -330.378
 offset_bottom = 236.419
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "H"
-
-[node name="x" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -385.931
-offset_top = -189.35
-offset_right = -347.931
-offset_bottom = -106.35
-text = "X"
-
-[node name="e2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -387.79
-offset_top = -134.023
-offset_right = -349.79
-offset_bottom = -51.0233
-text = "E"
-
-[node name="c3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -392.437
-offset_top = -20.191
-offset_right = -354.437
-offset_bottom = 62.809
-text = "C"
-
-[node name="q" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -393.367
-offset_top = 31.3198
-offset_right = -346.367
-offset_bottom = 114.32
-text = "Q"
-
-[node name="f" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -389.649
-offset_top = 215.741
-offset_right = -351.649
-offset_bottom = 298.741
-text = "F"
 
 [node name="b2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -340.391
@@ -393,34 +338,6 @@ offset_bottom = 235.783
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "S
 "
-
-[node name="h2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -322.733
-offset_top = -243.404
-offset_right = -277.733
-offset_bottom = -160.404
-text = "H"
-
-[node name="s2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -327.38
-offset_top = -21.4628
-offset_right = -289.38
-offset_bottom = 61.5372
-text = "S"
-
-[node name="g3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -332.956
-offset_top = 35.1354
-offset_right = -288.956
-offset_bottom = 118.135
-text = "G"
-
-[node name="n" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -332.026
-offset_top = 214.469
-offset_right = -285.026
-offset_bottom = 297.469
-text = "N"
 
 [node name="w" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -274.404
@@ -478,27 +395,6 @@ offset_bottom = 238.327
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "U"
 
-[node name="n2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -260.463
-offset_top = -20.8269
-offset_right = -213.463
-offset_bottom = 62.1731
-text = "N"
-
-[node name="h3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -263.251
-offset_top = 215.105
-offset_right = -216.251
-offset_bottom = 298.105
-text = "H"
-
-[node name="b4" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -200.052
-offset_top = 214.469
-offset_right = -153.052
-offset_bottom = 297.469
-text = "B"
-
 [node name="t2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -158.23
 offset_top = 218.921
@@ -540,10 +436,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "O"
 
 [node name="t4" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
-offset_left = 115.013
-offset_top = 217.013
-offset_right = 191.013
-offset_bottom = 300.013
+offset_left = 116.872
+offset_top = 219.557
+offset_right = 192.872
+offset_bottom = 302.557
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "T"
 
@@ -564,10 +460,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "L"
 
 [node name="e5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
-offset_left = 305.539
-offset_top = 217.013
-offset_right = 381.539
-offset_bottom = 300.013
+offset_left = 298.104
+offset_top = 218.285
+offset_right = 374.104
+offset_bottom = 301.285
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "E"
 
@@ -628,12 +524,28 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "O"
 
 [node name="e7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
-offset_left = 118.73
+offset_left = 117.801
 offset_top = 161.686
-offset_right = 194.73
+offset_right = 193.801
 offset_bottom = 244.686
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "E"
+
+[node name="i10" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 241.41
+offset_top = 164.866
+offset_right = 317.41
+offset_bottom = 247.866
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="w6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 298.103
+offset_top = 166.774
+offset_right = 374.103
+offset_bottom = 249.774
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "W"
 
 [node name="g5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 188.435
@@ -676,66 +588,66 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "E"
 
 [node name="i5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
-offset_left = 361.303
+offset_left = 360.374
 offset_top = -292.371
-offset_right = 437.303
+offset_right = 436.374
 offset_bottom = -209.371
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "I"
 
 [node name="n3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 360.373
-offset_top = -242.132
+offset_top = -233.229
 offset_right = 436.373
-offset_bottom = -159.132
+offset_bottom = -150.229
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "N"
 
 [node name="d5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 360.373
-offset_top = -183.626
+offset_top = -177.267
 offset_right = 436.373
-offset_bottom = -100.626
+offset_bottom = -94.2667
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "D"
 
 [node name="u4" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 360.373
-offset_top = -128.936
+offset_top = -122.577
 offset_right = 436.373
-offset_bottom = -45.9359
+offset_bottom = -39.5766
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "U"
 
 [node name="c4" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 357.585
-offset_top = -74.8814
+offset_top = -64.0705
 offset_right = 433.585
-offset_bottom = 8.11864
+offset_bottom = 18.9295
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "C"
 
 [node name="t6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 357.585
-offset_top = -16.3753
+offset_top = -6.2001
 offset_right = 433.585
-offset_bottom = 66.6247
+offset_bottom = 76.7999
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "T"
 
 [node name="i6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 357.585
-offset_top = 41.4948
+offset_top = 49.7619
 offset_right = 433.585
-offset_bottom = 124.495
+offset_bottom = 132.762
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "I"
 
 [node name="o7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = 358.514
-offset_top = 101.909
+offset_top = 105.725
 offset_right = 434.514
-offset_bottom = 184.909
+offset_bottom = 188.725
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "O"
 
@@ -790,22 +702,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "E
 "
 
-[node name="n5" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -200.052
-offset_top = -240.86
-offset_right = -153.052
-offset_bottom = -157.86
-text = "N
-"
-
-[node name="m2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
-offset_left = -202.841
-offset_top = 38.3151
-offset_right = -147.841
-offset_bottom = 121.315
-text = "M
-"
-
 [node name="w3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -213.064
 offset_top = -18.9191
@@ -855,17 +751,575 @@ offset_bottom = -49.7515
 theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
 text = "R"
 
+[node name="r7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -105.254
+offset_top = 41.4947
+offset_right = -29.2542
+offset_bottom = 124.495
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "R"
+
+[node name="d6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -102.466
+offset_top = -76.1531
+offset_right = -26.466
+offset_bottom = 6.84689
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "D"
+
+[node name="i7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -105.254
+offset_top = -130.843
+offset_right = -29.2542
+offset_bottom = -47.8434
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="w4" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -105.254
+offset_top = -181.718
+offset_right = -29.2542
+offset_bottom = -98.7182
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "W"
+
+[node name="b6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -54.1372
+offset_top = 42.7665
+offset_right = 21.8625
+offset_bottom = 125.767
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "B"
+
+[node name="o10" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -55.0666
+offset_top = -17.6472
+offset_right = 20.9331
+offset_bottom = 65.3528
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "O"
+
+[node name="a5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -54.1372
+offset_top = -74.2453
+offset_right = 21.8625
+offset_bottom = 8.7547
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "A"
+
+[node name="o9" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -53.2078
+offset_top = -131.479
+offset_right = 22.7919
+offset_bottom = -48.4794
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "O"
+
+[node name="t7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 190.293
+offset_top = -126.392
+offset_right = 266.293
+offset_bottom = -43.3919
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "T"
+
+[node name="i11" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 241.41
+offset_top = -123.848
+offset_right = 317.41
+offset_bottom = -40.8482
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="n10" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 299.962
+offset_top = -123.848
+offset_right = 375.962
+offset_bottom = -40.8482
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "N"
+
+[node name="d8" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 244.198
+offset_top = -67.886
+offset_right = 320.198
+offset_bottom = 15.114
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "D"
+
+[node name="o13" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 299.033
+offset_top = -65.9782
+offset_right = 375.032
+offset_bottom = 17.0218
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "O"
+
+[node name="r12" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 188.435
+offset_top = -11.2878
+offset_right = 264.434
+offset_bottom = 71.7122
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "R"
+
+[node name="i13" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 298.103
+offset_top = 106.996
+offset_right = 374.103
+offset_bottom = 189.996
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="l6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 301.821
+offset_top = 50.3978
+offset_right = 377.82
+offset_bottom = 133.398
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "L"
+
+[node name="s5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 299.033
+offset_top = -8.1081
+offset_right = 375.032
+offset_bottom = 74.8919
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "S"
+
+[node name="s4" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 189.364
+offset_top = 103.816
+offset_right = 265.364
+offset_bottom = 186.816
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "S"
+
+[node name="i12" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 242.339
+offset_top = 49.1259
+offset_right = 318.339
+offset_bottom = 132.126
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="n8" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = -48.5608
+offset_top = -238.316
+offset_right = 27.4389
+offset_bottom = -155.316
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "N"
+
+[node name="o11" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 0.697067
+offset_top = 42.7666
+offset_right = 76.6968
+offset_bottom = 125.767
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "O"
+
+[node name="w5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 62.9664
+offset_top = 101.273
+offset_right = 138.966
+offset_bottom = 184.273
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "W"
+
+[node name="i8" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 63.8958
+offset_top = 45.9462
+offset_right = 139.896
+offset_bottom = 128.946
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "I"
+
+[node name="n7" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 62.9665
+offset_top = -13.1957
+offset_right = 138.966
+offset_bottom = 69.8043
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "N"
+
+[node name="g6" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 61.1076
+offset_top = -71.7016
+offset_right = 137.107
+offset_bottom = 11.2984
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "G"
+
+[node name="l5" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 65.7546
+offset_top = -127.664
+offset_right = 141.754
+offset_bottom = -44.6638
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "L"
+
+[node name="o12" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 64.8252
+offset_top = -181.718
+offset_right = 140.825
+offset_bottom = -98.7182
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "O"
+
+[node name="r9" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 61.1076
+offset_top = -237.68
+offset_right = 137.107
+offset_bottom = -154.68
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "R"
+
+[node name="e12" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 118.73
+offset_top = 47.2181
+offset_right = 194.73
+offset_bottom = 130.218
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "E"
+
+[node name="e11" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 120.589
+offset_top = -71.0656
+offset_right = 196.589
+offset_bottom = 11.9344
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "E"
+
+[node name="y3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
+offset_left = 121.518
+offset_top = -125.756
+offset_right = 197.518
+offset_bottom = -42.756
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k6h3h")
+text = "Y"
+
+[node name="y3 (nonword)" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -85.7366
+offset_top = -17.6472
+offset_right = -48.7366
+offset_bottom = 65.3529
+text = "Y
+"
+
+[node name="x" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -386.86
+offset_top = -188.078
+offset_right = -349.86
+offset_bottom = -105.077
+text = "X"
+
+[node name="e2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -388.719
+offset_top = -134.659
+offset_right = -351.719
+offset_bottom = -51.659
+text = "E
+"
+
+[node name="n11" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -34.6198
+offset_top = -181.718
+offset_right = 12.3802
+offset_bottom = -98.7181
+text = "N"
+
+[node name="a7" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 20.2144
+offset_top = -182.99
+offset_right = 60.2144
+offset_bottom = -99.99
+text = "A"
+
+[node name="n5" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -201.911
+offset_top = -240.224
+offset_right = -154.911
+offset_bottom = -157.224
+text = "N"
+
+[node name="j2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 145.683
+offset_top = -298.094
+offset_right = 182.683
+offset_bottom = -215.094
+text = "J
+"
+
+[node name="r13" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 207.952
+offset_top = -293.643
+offset_right = 245.952
+offset_bottom = -210.643
+text = "R"
+
+[node name="y4" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 262.786
+offset_top = -291.099
+offset_right = 299.786
+offset_bottom = -208.099
+text = "Y
+"
+
+[node name="d11" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 320.409
+offset_top = -292.371
+offset_right = 364.409
+offset_bottom = -209.371
+text = "D
+"
+
+[node name="c2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -455.635
+offset_top = 151.511
+offset_right = -417.635
+offset_bottom = 234.511
+text = "C"
+
+[node name="g2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -457.494
+offset_top = 213.197
+offset_right = -413.494
+offset_bottom = 296.197
+text = "G"
+
+[node name="f" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -386.86
+offset_top = 215.741
+offset_right = -349.86
+offset_bottom = 298.741
+text = "F"
+
+[node name="n" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -332.955
+offset_top = 215.741
+offset_right = -285.955
+offset_bottom = 298.741
+text = "N"
+
+[node name="h3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -262.321
+offset_top = 215.741
+offset_right = -217.321
+offset_bottom = 298.741
+text = "H"
+
+[node name="b4" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -197.264
+offset_top = 216.377
+offset_right = -157.264
+offset_bottom = 299.377
+text = "B"
+
+[node name="c3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -388.719
+offset_top = -20.8268
+offset_right = -350.719
+offset_bottom = 62.1732
+text = "C"
+
+[node name="s2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -324.591
+offset_top = -21.4628
+offset_right = -287.591
+offset_bottom = 61.5373
+text = "S"
+
+[node name="n2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -264.18
+offset_top = -20.8268
+offset_right = -217.18
+offset_bottom = 62.1732
+text = "N"
+
+[node name="q" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -391.507
+offset_top = 31.3197
+offset_right = -344.507
+offset_bottom = 114.32
+text = "Q"
+
+[node name="g3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -330.167
+offset_top = 35.1353
+offset_right = -286.167
+offset_bottom = 118.135
+text = "G
+"
+
+[node name="m2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -201.911
+offset_top = 40.8587
+offset_right = -146.911
+offset_bottom = 123.859
+text = "M"
+
+[node name="h2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = -323.661
+offset_top = -242.768
+offset_right = -278.661
+offset_bottom = -159.768
+text = "H"
+
+[node name="h4" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 14.6381
+offset_top = -72.3375
+offset_right = 59.6381
+offset_bottom = 10.6625
+text = "H"
+
+[node name="d10" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 258.139
+offset_top = -10.6519
+offset_right = 302.139
+offset_bottom = 72.3481
+text = "D
+"
+
+[node name="x2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 207.023
+offset_top = 48.49
+offset_right = 244.023
+offset_bottom = 131.49
+text = "X"
+
+[node name="t8" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 259.998
+offset_top = 106.36
+offset_right = 296.998
+offset_bottom = 189.36
+text = "T"
+
+[node name="d9" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 205.164
+offset_top = -68.5219
+offset_right = 249.164
+offset_bottom = 14.4781
+text = "D
+"
+
+[node name="a6" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 206.093
+offset_top = -237.044
+offset_right = 246.093
+offset_bottom = -154.044
+text = "A
+"
+
+[node name="r11" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 261.857
+offset_top = -236.408
+offset_right = 299.857
+offset_bottom = -153.408
+text = "R"
+
+[node name="v3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 322.267
+offset_top = -234.501
+offset_right = 359.267
+offset_bottom = -151.501
+text = "V
+"
+
+[node name="c5" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 206.093
+offset_top = -180.446
+offset_right = 244.093
+offset_bottom = -97.4463
+text = "C"
+
+[node name="d7" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 262.786
+offset_top = -179.174
+offset_right = 306.786
+offset_bottom = -96.1744
+text = "D"
+
+[node name="f2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 323.197
+offset_top = -177.903
+offset_right = 360.197
+offset_bottom = -94.9025
+text = "F"
+
+[node name="i9" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 139.177
+offset_top = 101.908
+offset_right = 176.177
+offset_bottom = 184.908
+text = "I
+"
+
+[node name="r10" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 140.106
+offset_top = -12.5597
+offset_right = 178.106
+offset_bottom = 70.4403
+text = "R
+"
+
+[node name="n9" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 135.459
+offset_top = -179.81
+offset_right = 182.459
+offset_bottom = -96.8103
+text = "N"
+
+[node name="v2" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 141.036
+offset_top = -235.137
+offset_right = 178.036
+offset_bottom = -152.137
+text = "V"
+
+[node name="r8" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 20.2144
+offset_top = 98.0928
+offset_right = 58.2144
+offset_bottom = 181.093
+text = "R
+"
+
+[node name="p3" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 20.2143
+offset_top = -16.3753
+offset_right = 57.2143
+offset_bottom = 66.6247
+text = "P"
+
+[node name="z" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 20.2143
+offset_top = -127.664
+offset_right = 57.2143
+offset_bottom = -44.6637
+text = "Z"
+
+[node name="b7" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
+offset_left = 19.285
+offset_top = -237.68
+offset_right = 59.285
+offset_bottom = -154.68
+text = "B"
+
 [node name="life1" type="Sprite2D" parent="."]
-position = Vector2(1461, 84)
+position = Vector2(1323, 84)
 scale = Vector2(0.28719, 0.338983)
+texture = ExtResource("4_1jl8v")
 
 [node name="life2" type="Sprite2D" parent="."]
-position = Vector2(1792, 84)
+position = Vector2(1697, 84)
 scale = Vector2(0.299599, 0.315403)
+texture = ExtResource("4_1jl8v")
 
 [node name="life3" type="Sprite2D" parent="."]
-position = Vector2(1629, 85)
+position = Vector2(1505, 85)
 scale = Vector2(0.316116, 0.318856)
+texture = ExtResource("4_1jl8v")
 
 [node name="explosionSound" type="AudioStreamPlayer" parent="."]
 
@@ -877,3 +1331,199 @@ sprite_frames = SubResource("SpriteFrames_jggaf")
 animation = &"explosion"
 frame = 10
 frame_progress = 0.435958
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1205.0
+offset_top = 221.0
+offset_right = 1758.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 40
+text = "Non-word letters remaining: "
+
+[node name="quit" type="Button" parent="."]
+offset_left = 1358.0
+offset_top = 699.0
+offset_right = 1610.0
+offset_bottom = 802.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[node name="quitScreen" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(730, 346)
+scale = Vector2(3.63043, 2.26429)
+texture = ExtResource("22_42xi5")
+
+[node name="Label" type="Label" parent="quitScreen"]
+offset_left = -40.0778
+offset_top = -106.656
+offset_right = -0.0778198
+offset_bottom = -83.6562
+
+[node name="return" type="Button" parent="quitScreen"]
+offset_left = -40.0778
+offset_top = -106.656
+offset_right = 104.922
+offset_bottom = -75.6562
+disabled = true
+text = "Don't be a quitter
+"
+
+[node name="exit" type="Button" parent="quitScreen"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="loseLife" from="CrosswordBase/g" to="." method="_on_a_lose_life"]
+[connection signal="exploded" from="CrosswordBase/y" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/d" to="." method="_on_d_exploded"]
+[connection signal="loseLife" from="CrosswordBase/b" to="." method="_on_d_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r" to="." method="_on_d_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e" to="." method="_on_d_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/d2" to="." method="_on_d_lose_life"]
+[connection signal="exploded" from="CrosswordBase/i" to="." method="_on_i_exploded"]
+[connection signal="exploded" from="CrosswordBase/v" to="." method="_on_v_exploded"]
+[connection signal="loseLife" from="CrosswordBase/p" to="." method="_on_d_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/c" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/a" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/d4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/u" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/u2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/h" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/b2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/a2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/s" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/p2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/b3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/u3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/a3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/b5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w2" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/g4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i10" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/g5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/m" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e8" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/d5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/u4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/c4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/u5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/s3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/k" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o8" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e9" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w3" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e10" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/a4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/d6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/b6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o10" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/a5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o9" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/t7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i11" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n10" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/d8" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o13" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r12" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i13" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/s5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/s4" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i12" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n8" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o11" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/w5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/i8" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/n7" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/g6" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/l5" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/o12" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/r9" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e12" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/e11" to="." method="_on_a_lose_life"]
+[connection signal="loseLife" from="CrosswordBase/y3" to="." method="_on_a_lose_life"]
+[connection signal="exploded" from="CrosswordBase/y3 (nonword)" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/x" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/e2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/n11" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/a7" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/n5" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/j2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/r13" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/y4" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/d11" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/c2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/g2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/f" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/n" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/h3" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/b4" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/c3" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/s2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/n2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/q" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/g3" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/m2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/h2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/h4" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/d10" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/x2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/t8" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/d9" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/a6" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/r11" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/v3" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/c5" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/d7" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/f2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/i9" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/r10" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/n9" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/v2" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/r8" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/p3" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/z" to="." method="_on_y_exploded"]
+[connection signal="exploded" from="CrosswordBase/b7" to="." method="_on_y_exploded"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="quitScreen/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="quitScreen/exit" to="." method="_on_exit_pressed"]
