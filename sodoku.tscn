@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmp2gh8uvu3pn"]
+[gd_scene load_steps=27 format=3 uid="uid://carhxhqbqisa0"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
-[ext_resource type="Texture2D" uid="uid://bbfyvnc3ee3jj" path="res://sodoku assets/better better easier board.png" id="2_encrp"]
+[ext_resource type="Texture2D" uid="uid://bea5agy5jnckw" path="res://sodoku assets/best for sure.png" id="2_ruw1k"]
 [ext_resource type="Script" path="res://SodokuBoard.gd" id="3_xrgyb"]
 [ext_resource type="Script" path="res://(6,4).gd" id="4_rrnty"]
 [ext_resource type="Script" path="res://(4,5).gd" id="5_u6gub"]
@@ -20,14 +20,21 @@
 [ext_resource type="Script" path="res://(4,4).gd" id="18_nl8w5"]
 [ext_resource type="Script" path="res://(8,7).gd" id="19_wbsyc"]
 [ext_resource type="Script" path="res://(7,6).gd" id="20_0jwk2"]
+[ext_resource type="Texture2D" uid="uid://nk0phcejljlp" path="res://sodoku assets/yellow board.png" id="21_0o3tm"]
+[ext_resource type="Texture2D" path="res://sodoku assets/download.png" id="21_w57iu"]
+[ext_resource type="Script" path="res://glorp.gd" id="22_h8nha"]
+[ext_resource type="Script" path="res://TextEdit.gd" id="24_d272v"]
+[ext_resource type="Texture2D" uid="uid://db4uwvvebosbc" path="res://word search assets/crying glorp.png" id="24_yhle4"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="25_gljvj"]
 
 [node name="Sodoku" type="Node2D"]
 script = ExtResource("1_ise78")
+metadata/_edit_vertical_guides_ = [1904.0]
 
 [node name="SodokuBoard" type="Sprite2D" parent="."]
-position = Vector2(3, -13)
+position = Vector2(-46, -77)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_encrp")
+texture = ExtResource("2_ruw1k")
 script = ExtResource("3_xrgyb")
 
 [node name="(6,4)" type="TextEdit" parent="SodokuBoard"]
@@ -238,4 +245,66 @@ theme_override_font_sizes/font_size = 40
 scroll_fit_content_height = true
 script = ExtResource("20_0jwk2")
 
-[connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard" method="_on__text_changed"]
+[node name="glorp" type="Sprite2D" parent="SodokuBoard"]
+visible = false
+top_level = true
+position = Vector2(990, 451)
+scale = Vector2(1.54659, 1.53814)
+texture = ExtResource("21_w57iu")
+script = ExtResource("22_h8nha")
+
+[node name="Label" type="Label" parent="SodokuBoard"]
+offset_left = -504.483
+offset_top = -160.066
+offset_right = -464.483
+offset_bottom = -137.066
+
+[node name="blankBoard" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961.5, 485)
+scale = Vector2(2.65457, 1.37535)
+texture = ExtResource("21_0o3tm")
+
+[node name="TextEdit" type="TextEdit" parent="blankBoard"]
+offset_left = -380.0
+offset_top = -345.0
+offset_right = 392.0
+offset_bottom = -59.0
+theme_override_font_sizes/font_size = 200
+text = "Winner!"
+script = ExtResource("24_d272v")
+
+[node name="exit" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 894.0
+offset_right = 294.0
+offset_bottom = 957.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="exit"]
+visible = false
+position = Vector2(-277.601, -319.393)
+texture = ExtResource("24_yhle4")
+script = ExtResource("25_gljvj")
+
+[connection signal="makeVisible" from="SodokuBoard" to="." method="_on_sodoku_board_make_visible"]
+[connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard/(6,4)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,5)" to="SodokuBoard/(4,5)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,3)" to="SodokuBoard/(0,3)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(2,4)" to="SodokuBoard/(2,4)" method="_on__text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(7,3)" to="SodokuBoard/(7,3)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,7)" to="SodokuBoard/(4,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,2)" to="SodokuBoard/(4,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(1,2)" to="SodokuBoard/(1,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(1,0)" to="SodokuBoard/(1,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(6,2)" to="SodokuBoard/(6,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(3,0)" to="SodokuBoard/(3,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,7)" to="SodokuBoard/(0,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(8,0)" to="SodokuBoard/(8,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,8)" to="SodokuBoard/(0,8)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,4)" to="SodokuBoard/(4,4)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(8,7)" to="SodokuBoard/(8,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(7,6)" to="SodokuBoard/(7,6)" method="_on_text_changed"]
+[connection signal="visibility_changed" from="SodokuBoard/glorp" to="SodokuBoard/glorp" method="_on_visibility_changed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

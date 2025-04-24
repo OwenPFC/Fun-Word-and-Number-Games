@@ -8,10 +8,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	#$SodokuBoard.rotation_degrees += 12 * delta
+	$SodokuBoard.rotation_degrees += 12 * delta
 	
-	#pos = Vector2(100, 200)
-	#position = pos
-	#if $SodokuBoard.pos.x >2000:
-		#$SodokuBoard.pos.x = 0
-#that's wierd
+func _on_exit_pressed():
+	get_tree().change_scene_to_file("res://menu.tscn")
+	
+	#if(Global.getNumCorrect()==17):
+		#$glorp.visible=true
+		#$blankBoard.visible=true
+
+
+func _on_sodoku_board_make_visible():
+	$blankBoard.visible=true

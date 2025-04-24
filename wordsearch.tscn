@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://wordsearch.gd" id="1_08m1n"]
 [ext_resource type="Texture2D" uid="uid://botpdrex1ey10" path="res://word search assets/crossword base.png" id="2_6qs8d"]
-[ext_resource type="PackedScene" uid="uid://ch45hrbr0jp76" path="res://letter_button.tscn" id="2_bw4ay"]
+[ext_resource type="PackedScene" path="res://letter_button.tscn" id="2_bw4ay"]
 [ext_resource type="PackedScene" uid="uid://dkgd4863t8pnb" path="res://non_word_button.tscn" id="3_kpad2"]
 [ext_resource type="Texture2D" uid="uid://4hktsjlv4y5c" path="res://word search assets/download.png" id="4_1jl8v"]
 [ext_resource type="Texture2D" uid="uid://jo4bpp33hquj" path="res://word search assets/explosion/1.png" id="5_a1nqu"]
@@ -25,27 +25,27 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qooky"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw0ca"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqbof"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vohxu"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxro0"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7p5q"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvm1l"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4iwn2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p7f26"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1ctq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylw85"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5wep"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pgt8"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
@@ -134,7 +134,7 @@ offset_left = -458.424
 offset_top = -296.823
 offset_right = -412.424
 offset_bottom = -213.823
-theme_override_styles/normal = SubResource("StyleBoxTexture_iw0ca")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nqbof")
 text = "G"
 
 [node name="y" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -157,7 +157,7 @@ offset_left = -264.624
 offset_top = -295.622
 offset_right = -214.624
 offset_bottom = -212.622
-theme_override_styles/normal = SubResource("StyleBoxTexture_vohxu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bxro0")
 text = "B"
 
 [node name="r" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -165,7 +165,7 @@ offset_left = -203.836
 offset_top = -296.709
 offset_right = -153.836
 offset_bottom = -213.709
-theme_override_styles/normal = SubResource("StyleBoxTexture_i7p5q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nvm1l")
 text = "R"
 
 [node name="e" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -173,7 +173,7 @@ offset_left = -147.2
 offset_top = -296.073
 offset_right = -97.2002
 offset_bottom = -213.073
-theme_override_styles/normal = SubResource("StyleBoxTexture_4iwn2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p7f26")
 text = "E"
 
 [node name="d2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -181,7 +181,7 @@ offset_left = -88.5648
 offset_top = -296.801
 offset_right = -38.5648
 offset_bottom = -213.801
-theme_override_styles/normal = SubResource("StyleBoxTexture_s1ctq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ylw85")
 text = "D"
 
 [node name="i" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -203,7 +203,7 @@ offset_left = 79.5879
 offset_top = -295.437
 offset_right = 129.588
 offset_bottom = -212.437
-theme_override_styles/normal = SubResource("StyleBoxTexture_j5wep")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5pgt8")
 text = "P"
 
 [node name="r3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]

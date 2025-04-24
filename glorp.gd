@@ -1,17 +1,11 @@
-extends TextEdit
-var boxCorrect = false
+extends Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$".".rotation_degrees = 0
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-	
-func _checkBox():
-	if($".".text=="I"):
-		Global._incNumCorrect()
-		
-func _on_text_changed():
-	_checkBox()
+	$".".rotation_degrees += 30 * delta
+

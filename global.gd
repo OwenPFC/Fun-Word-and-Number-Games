@@ -10,9 +10,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	#print(getNumCorrect())
 
 func _incNumCorrect():
 	numCorrect+=1
+
+func _decNumCorrect():
+	numCorrect-=1
 	
 func getNumCorrect():
 	return numCorrect
