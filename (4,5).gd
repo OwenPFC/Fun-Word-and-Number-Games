@@ -1,5 +1,5 @@
 extends TextEdit
-var boxCorrect: bool = false
+var boxCorrect = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,5 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if($TextEdit.text.equals("III")):
-		boxCorrect=true
+	pass
+
+func _checkBox():
+	if($".".text=="III"):
+		Global._incNumCorrect()

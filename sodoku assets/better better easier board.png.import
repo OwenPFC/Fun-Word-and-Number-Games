@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byy5djgceo68x"
-path="res://.godot/imported/Screenshot 2025-04-20 132225.png-d7c948f628b6249c6e5374126c34e755.ctex"
+uid="uid://bbfyvnc3ee3jj"
+path="res://.godot/imported/better better easier board.png-71055138d2b94a70d4fe352339ca4af3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sodoku assets/Screenshot 2025-04-20 132225.png"
-dest_files=["res://.godot/imported/Screenshot 2025-04-20 132225.png-d7c948f628b6249c6e5374126c34e755.ctex"]
+source_file="res://sodoku assets/better better easier board.png"
+dest_files=["res://.godot/imported/better better easier board.png-71055138d2b94a70d4fe352339ca4af3.ctex"]
 
 [params]
 

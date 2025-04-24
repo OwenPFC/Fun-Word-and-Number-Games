@@ -1,50 +1,31 @@
-[gd_scene load_steps=37 format=3 uid="uid://dc1vq6qdhjd3f"]
+[gd_scene load_steps=18 format=3 uid="uid://d24dh0e603eds"]
 
-[ext_resource type="Script" path="res://wordsearch.gd" id="1_08m1n"]
-[ext_resource type="Texture2D" path="res://word search assets/crossword base.png" id="2_6qs8d"]
-[ext_resource type="PackedScene" uid="uid://ch45hrbr0jp76" path="res://letter_button.tscn" id="2_bw4ay"]
-[ext_resource type="PackedScene" uid="uid://dkgd4863t8pnb" path="res://non_word_button.tscn" id="3_kpad2"]
-[ext_resource type="Texture2D" path="res://word search assets/download.png" id="4_1jl8v"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/1.png" id="5_a1nqu"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/2.png" id="6_6k3um"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/3.png" id="7_3ecja"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/4.png" id="8_atsiq"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/5.png" id="9_nho86"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/6.png" id="10_c40n4"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/7.png" id="11_x8es1"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/8.png" id="12_vqgdj"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/9.png" id="13_ptgnq"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/10.png" id="14_ovfkl"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/11.png" id="15_sdae5"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/12.png" id="16_plqwv"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/13.png" id="17_fji3b"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/14.png" id="18_phxde"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/15.png" id="19_y6u5s"]
-[ext_resource type="Texture2D" path="res://word search assets/explosion/16.png" id="20_lh2v4"]
+[ext_resource type="PackedScene" path="res://letter_button.tscn" id="2_bw4ay"]
+[ext_resource type="PackedScene" path="res://non_word_button.tscn" id="3_kpad2"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qooky"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bi1or"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3jv5"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy3v4"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dcfy"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xftku"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxlei"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ga24r"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_voqk1"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtsby"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrlyf"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u65wj"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vuue"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
@@ -66,52 +47,52 @@ texture = SubResource("CanvasTexture_qooky")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_a1nqu")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_6k3um")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_3ecja")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_atsiq")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_nho86")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_c40n4")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_x8es1")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_vqgdj")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_ptgnq")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_ovfkl")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_sdae5")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_plqwv")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_fji3b")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_phxde")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_y6u5s")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_lh2v4")
+"texture": null
 }],
 "loop": false,
 "name": &"explosion",
@@ -119,21 +100,19 @@ animations = [{
 }]
 
 [node name="wordsearch" type="Node2D"]
-script = ExtResource("1_08m1n")
 metadata/_edit_horizontal_guides_ = [-349.0, 83.0]
 metadata/_edit_vertical_guides_ = [1913.0, 458.0, 526.0, 587.0, 643.0, 698.0, 757.0, 825.0, 884.0, 960.0, 1040.0, 1133.0, 1142.0]
 
 [node name="CrosswordBase" type="Sprite2D" parent="."]
 position = Vector2(716.25, 476.75)
 scale = Vector2(1.07597, 1.57249)
-texture = ExtResource("2_6qs8d")
 
 [node name="g" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
 offset_left = -458.424
 offset_top = -296.823
 offset_right = -412.424
 offset_bottom = -213.823
-theme_override_styles/normal = SubResource("StyleBoxTexture_bi1or")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k3jv5")
 text = "G"
 
 [node name="y" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -156,7 +135,7 @@ offset_left = -264.624
 offset_top = -295.622
 offset_right = -214.624
 offset_bottom = -212.622
-theme_override_styles/normal = SubResource("StyleBoxTexture_wy3v4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4dcfy")
 text = "B"
 
 [node name="r" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -164,7 +143,7 @@ offset_left = -203.836
 offset_top = -296.709
 offset_right = -153.836
 offset_bottom = -213.709
-theme_override_styles/normal = SubResource("StyleBoxTexture_xftku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lxlei")
 text = "R"
 
 [node name="e" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -172,7 +151,7 @@ offset_left = -147.2
 offset_top = -296.073
 offset_right = -97.2002
 offset_bottom = -213.073
-theme_override_styles/normal = SubResource("StyleBoxTexture_ga24r")
+theme_override_styles/normal = SubResource("StyleBoxTexture_voqk1")
 text = "E"
 
 [node name="d2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -180,7 +159,7 @@ offset_left = -88.5648
 offset_top = -296.801
 offset_right = -38.5648
 offset_bottom = -213.801
-theme_override_styles/normal = SubResource("StyleBoxTexture_gtsby")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rrlyf")
 text = "D"
 
 [node name="i" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -202,7 +181,7 @@ offset_left = 79.5879
 offset_top = -295.437
 offset_right = 129.588
 offset_bottom = -212.437
-theme_override_styles/normal = SubResource("StyleBoxTexture_u65wj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2vuue")
 text = "P"
 
 [node name="j" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -879,17 +858,14 @@ text = "R"
 [node name="life1" type="Sprite2D" parent="."]
 position = Vector2(1461, 84)
 scale = Vector2(0.28719, 0.338983)
-texture = ExtResource("4_1jl8v")
 
 [node name="life2" type="Sprite2D" parent="."]
 position = Vector2(1792, 84)
 scale = Vector2(0.299599, 0.315403)
-texture = ExtResource("4_1jl8v")
 
 [node name="life3" type="Sprite2D" parent="."]
 position = Vector2(1629, 85)
 scale = Vector2(0.316116, 0.318856)
-texture = ExtResource("4_1jl8v")
 
 [node name="explosionSound" type="AudioStreamPlayer" parent="."]
 
@@ -901,75 +877,3 @@ sprite_frames = SubResource("SpriteFrames_jggaf")
 animation = &"explosion"
 frame = 10
 frame_progress = 0.435958
-
-[connection signal="loseLife" from="CrosswordBase/g" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/b" to="." method="_on_d_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/r" to="." method="_on_d_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e" to="." method="_on_d_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/d2" to="." method="_on_d_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/p" to="." method="_on_d_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/r3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/i2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/c" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/l" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/a" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/d4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/u" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/u2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/h" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/b2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/a2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/i3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/l2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/s" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/w" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/p2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/b3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/u3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/a3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/l3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/r4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/b5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/w2" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e6" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/g4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/r5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o6" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e7" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/g5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/m" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/i4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e8" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/i5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/n3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/d5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/u4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/c4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/t6" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/i6" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o7" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/n4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/u5" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/s3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/k" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/o8" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e9" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/w3" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/l4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/n6" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/e10" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/a4" to="." method="_on_a_lose_life"]
-[connection signal="loseLife" from="CrosswordBase/r6" to="." method="_on_a_lose_life"]

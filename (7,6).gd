@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 	
 func _checkBox():
-	if($".".text=="VII"):
+	if($".".text=="V"):
 		Global._incNumCorrect()

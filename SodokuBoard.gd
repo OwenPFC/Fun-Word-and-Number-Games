@@ -4,7 +4,6 @@ var pos: Vector2 = Vector2.ZERO
 const speed: int = 40
 var test_scale = 1
 var adjacencyList = {"(0,3)": ["", "(2,4)", "(0,7)", "(1,2)"]}
-var currentNode = null
 var correctGame: bool = false
 
 #var dict_variable_key = "Another key name"
@@ -16,7 +15,7 @@ var correctGame: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pos = Vector2(100, 300)
+	pos = Vector2(300, 300)
 	position = pos
 	test_scale = .6
 	scale = Vector2(test_scale, test_scale)
@@ -24,13 +23,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pos.x += speed * delta
-	position = pos
+	pass
+	#pos.x += speed * delta
+	#position = pos
 	
+	if(Global.getNumCorrect()==17):
+		correctGame=true
+		print("Game won!!!!!")
+		print(":)))))")
+		
 	#test_scale += 1
 	#scale = Vector2(test_scale, test_scale)
 
 
-func _on__text_changed():
-	if(Input.is_action_pressed("left")):
-		currentNode = adjacencyList.find_key(currentNode).get(0)
+#func _on__text_changed():
+	#if(Input.is_action_pressed("left")):
+		#currentNode = adjacencyList.find_key(currentNode).get(0)

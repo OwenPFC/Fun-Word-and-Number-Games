@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmp2gh8uvu3pn"]
+[gd_scene load_steps=21 format=3 uid="uid://carhxhqbqisa0"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
-[ext_resource type="Texture2D" uid="uid://bnk51tvs5chki" path="res://sodoku assets/Screenshot 2025-04-20 144617.png" id="2_m82fv"]
+[ext_resource type="Texture2D" uid="uid://bbfyvnc3ee3jj" path="res://sodoku assets/better better easier board.png" id="2_encrp"]
 [ext_resource type="Script" path="res://SodokuBoard.gd" id="3_xrgyb"]
 [ext_resource type="Script" path="res://(6,4).gd" id="4_rrnty"]
 [ext_resource type="Script" path="res://(4,5).gd" id="5_u6gub"]
@@ -18,6 +18,8 @@
 [ext_resource type="Script" path="res://(8,0).gd" id="16_his0j"]
 [ext_resource type="Script" path="res://(0,8).gd" id="17_fxcys"]
 [ext_resource type="Script" path="res://(4,4).gd" id="18_nl8w5"]
+[ext_resource type="Script" path="res://(8,7).gd" id="19_wbsyc"]
+[ext_resource type="Script" path="res://(7,6).gd" id="20_0jwk2"]
 
 [node name="Sodoku" type="Node2D"]
 script = ExtResource("1_ise78")
@@ -25,7 +27,7 @@ script = ExtResource("1_ise78")
 [node name="SodokuBoard" type="Sprite2D" parent="."]
 position = Vector2(3, -13)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_m82fv")
+texture = ExtResource("2_encrp")
 script = ExtResource("3_xrgyb")
 
 [node name="(6,4)" type="TextEdit" parent="SodokuBoard"]
@@ -222,6 +224,7 @@ theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 scroll_fit_content_height = true
+script = ExtResource("19_wbsyc")
 
 [node name="(7,6)" type="TextEdit" parent="SodokuBoard"]
 offset_left = 208.0
@@ -233,5 +236,6 @@ theme_override_colors/background_color = Color(1, 0.529412, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 scroll_fit_content_height = true
+script = ExtResource("20_0jwk2")
 
 [connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard" method="_on__text_changed"]
