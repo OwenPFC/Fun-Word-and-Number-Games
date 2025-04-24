@@ -53,7 +53,7 @@ text = "quit"
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="exit" type="Button" parent="creditsImage"]
+[node name="leaveCredits" type="Button" parent="creditsImage"]
 offset_right = 8.0
 offset_bottom = 8.0
 disabled = true

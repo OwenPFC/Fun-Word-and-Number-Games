@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dw3nfvj0nuha6"]
+[gd_scene load_steps=149 format=3 uid="uid://dw3nfvj0nuha6"]
 
 [ext_resource type="Script" path="res://crossword.gd" id="1_lpbfh"]
+[ext_resource type="Texture2D" uid="uid://4hktsjlv4y5c" path="res://word search assets/download.png" id="2_68nai"]
 [ext_resource type="Texture2D" uid="uid://utremklxs51v" path="res://crossword assets/LOL.png" id="2_bnbno"]
 [ext_resource type="Texture2D" uid="uid://gy2b0lnk6r8h" path="res://crossword assets/white.png" id="2_bvd23"]
 [ext_resource type="Texture2D" uid="uid://0w6k1bkkhljb" path="res://crossword assets/crossword base.png" id="2_jn2l3"]
@@ -8,9 +9,653 @@
 [ext_resource type="Texture2D" uid="uid://cmg6hep57e2vm" path="res://crossword assets/woodrow.png" id="4_17642"]
 [ext_resource type="Texture2D" uid="uid://c8nbwa53xlqfs" path="res://crossword assets/finger.png" id="5_d2pyo"]
 [ext_resource type="Texture2D" uid="uid://db4uwvvebosbc" path="res://word search assets/crying glorp.png" id="6_ga4e3"]
+[ext_resource type="Texture2D" uid="uid://jow2ewakglcp" path="res://connections assets/blue.png" id="10_xy5ny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uorv3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qeltv"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_o2ytt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tkjt"]
+texture = SubResource("CanvasTexture_o2ytt")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eac0l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1udi"]
+texture = SubResource("CanvasTexture_eac0l")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnffu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovqil"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gojtk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hl254"]
+texture = SubResource("CanvasTexture_gojtk")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0o8xw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1n7g"]
+texture = SubResource("CanvasTexture_0o8xw")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vupc3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oeetu"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_atplu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pke05"]
+texture = SubResource("CanvasTexture_atplu")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f3lgk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ui6e4"]
+texture = SubResource("CanvasTexture_f3lgk")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vt0u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nn014"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s78v2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22uuc"]
+texture = SubResource("CanvasTexture_s78v2")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7kv8c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fwas"]
+texture = SubResource("CanvasTexture_7kv8c")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2648"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_poa28"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_txjcg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oguaw"]
+texture = SubResource("CanvasTexture_txjcg")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1as62"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg25u"]
+texture = SubResource("CanvasTexture_1as62")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b1cwc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jka7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b5uwm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmqfh"]
+texture = SubResource("CanvasTexture_b5uwm")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bw1tj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mj4y"]
+texture = SubResource("CanvasTexture_bw1tj")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3de3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atn87"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_beigm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvm2d"]
+texture = SubResource("CanvasTexture_beigm")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_umwdb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y64db"]
+texture = SubResource("CanvasTexture_umwdb")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssj27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1f1c"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_c453c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcm8r"]
+texture = SubResource("CanvasTexture_c453c")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qkn54"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4b65i"]
+texture = SubResource("CanvasTexture_qkn54")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mptv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrxr8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4x8lp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6pctg"]
+texture = SubResource("CanvasTexture_4x8lp")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ri6hw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f7jhm"]
+texture = SubResource("CanvasTexture_ri6hw")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ergl2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjwmo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b7cr7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvsqi"]
+texture = SubResource("CanvasTexture_b7cr7")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_muwxm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o07lh"]
+texture = SubResource("CanvasTexture_muwxm")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_762l7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fk471"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cgsou"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3vf0"]
+texture = SubResource("CanvasTexture_cgsou")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_m7qjw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsdro"]
+texture = SubResource("CanvasTexture_m7qjw")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_buim4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2wxl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sndyj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmbx5"]
+texture = SubResource("CanvasTexture_sndyj")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lyux8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_le4bg"]
+texture = SubResource("CanvasTexture_lyux8")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa4e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ykllr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_op8rf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwgkr"]
+texture = SubResource("CanvasTexture_op8rf")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dahtu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmuy1"]
+texture = SubResource("CanvasTexture_dahtu")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4bgig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3yvw"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nuegu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xq7ub"]
+texture = SubResource("CanvasTexture_nuegu")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yorsf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4sun"]
+texture = SubResource("CanvasTexture_yorsf")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6sq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vj3lk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_y3h7i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcfmo"]
+texture = SubResource("CanvasTexture_y3h7i")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_u3atx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0a2fa"]
+texture = SubResource("CanvasTexture_u3atx")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8rjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4lgf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_d2lbp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqia5"]
+texture = SubResource("CanvasTexture_d2lbp")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6hpej"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekgto"]
+texture = SubResource("CanvasTexture_6hpej")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvc03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgyjq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wmkns"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g215y"]
+texture = SubResource("CanvasTexture_wmkns")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_iaqla"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pyjn"]
+texture = SubResource("CanvasTexture_iaqla")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpxy6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8bs4"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4kofu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yduli"]
+texture = SubResource("CanvasTexture_4kofu")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ie0u5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q8kn0"]
+texture = SubResource("CanvasTexture_ie0u5")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvvi7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ccrw5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yeld4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6exwu"]
+texture = SubResource("CanvasTexture_yeld4")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_n4ckx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bw74q"]
+texture = SubResource("CanvasTexture_n4ckx")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sf1go"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xww0t"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ggj8q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ix3pt"]
+texture = SubResource("CanvasTexture_ggj8q")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_picno"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6a11h"]
+texture = SubResource("CanvasTexture_picno")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lwbh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ah2be"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5x3pt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsj7a"]
+texture = SubResource("CanvasTexture_5x3pt")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_df110"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lv505"]
+texture = SubResource("CanvasTexture_df110")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sih7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pa1x8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5q855"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqtt8"]
+texture = SubResource("CanvasTexture_5q855")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pegce"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdw0e"]
+texture = SubResource("CanvasTexture_pegce")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ml2c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tky0r"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r3xgn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5my4n"]
+texture = SubResource("CanvasTexture_r3xgn")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_h36sh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ifk6"]
+texture = SubResource("CanvasTexture_h36sh")
+modulate_color = Color(0.607843, 0.65098, 0.976471, 0.52549)
 
 [node name="Crossword" type="Node2D"]
 script = ExtResource("1_lpbfh")
+metadata/_edit_vertical_guides_ = [1928.0]
+
+[node name="Download" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.396078)
+position = Vector2(1043, 319)
+scale = Vector2(5.32438, 4.55932)
+texture = ExtResource("2_68nai")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 959.0
+offset_top = 8.0
+offset_right = 1882.0
+offset_bottom = 1130.0
+theme_override_font_sizes/font_size = 25
+text = "1. The bread in a Human Growth Hormone Sandwich
+5. Steely Dan's masterpiece album, \"Asia\"... wait, that's not right
+6. For meridiem or modulation
+7. The meat in a Human Growth Hormone sandwich
+8. No parental guidance necessary
+5,1. Great effort!
+6,1. The [Spanish]
+7,1.
+8,1. The perfect shape for bologna
+2. Can't get to the root of this one
+5,2. A short dash, perhaps
+6,2. Unit of dollars, informally
+7,2. In speech, acceptable as a number
+8,2. 20th time's the charm for Henry Ford
+3. Put one over this, and you've got frequency
+5,3. Often found under a log?
+6,3. Verbal punctuation for a Canadian
+7,3. Given first by the Wheel of Fortune
+8,3. The proper way to end Uruguay
+4. Makes a great middle name
+5,4. 
+6,4. Often used for diminution
+7,4. Mass in motion
+
+
+"
+
+[node name="hint buttons" type="Node2D" parent="."]
+
+[node name="h" type="Button" parent="hint buttons"]
+offset_left = 953.0
+offset_top = 9.0
+offset_right = 1602.0
+offset_bottom = 49.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uorv3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qeltv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1tkjt")
+theme_override_styles/focus = SubResource("StyleBoxTexture_d1udi")
+
+[node name="a" type="Button" parent="hint buttons"]
+offset_left = 959.0
+offset_top = 200.0
+offset_right = 1160.0
+offset_bottom = 236.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qnffu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ovqil")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hl254")
+theme_override_styles/focus = SubResource("StyleBoxTexture_a1n7g")
+
+[node name="l2" type="Button" parent="hint buttons"]
+offset_left = 956.0
+offset_top = 241.0
+offset_right = 1171.0
+offset_bottom = 271.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vupc3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oeetu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pke05")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ui6e4")
+
+[node name="l3" type="Button" parent="hint buttons"]
+offset_left = 956.0
+offset_top = 278.0
+offset_right = 1001.0
+offset_bottom = 309.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vt0u3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nn014")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_22uuc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_1fwas")
+
+[node name="o3" type="Button" parent="hint buttons"]
+offset_left = 959.0
+offset_top = 319.0
+offset_right = 1376.0
+offset_bottom = 347.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s2648")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_poa28")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oguaw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vg25u")
+
+[node name="i" type="Button" parent="hint buttons"]
+offset_left = 954.0
+offset_top = 353.0
+offset_right = 1371.0
+offset_bottom = 384.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b1cwc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4jka7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mmqfh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0mj4y")
+
+[node name="n" type="Button" parent="hint buttons"]
+offset_left = 957.0
+offset_top = 394.0
+offset_right = 1282.0
+offset_bottom = 423.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3de3g")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_atn87")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dvm2d")
+theme_override_styles/focus = SubResource("StyleBoxTexture_y64db")
+
+[node name="g2" type="Button" parent="hint buttons"]
+offset_left = 955.0
+offset_top = 433.0
+offset_right = 1322.0
+offset_bottom = 455.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ssj27")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f1f1c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bcm8r")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4b65i")
+
+[node name="o2" type="Button" parent="hint buttons"]
+offset_left = 954.0
+offset_top = 471.0
+offset_right = 1436.0
+offset_bottom = 497.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mptv2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jrxr8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6pctg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_f7jhm")
+
+[node name="t2" type="Button" parent="hint buttons"]
+offset_left = 954.0
+offset_top = 509.0
+offset_right = 1461.0
+offset_bottom = 539.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ergl2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pjwmo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hvsqi")
+theme_override_styles/focus = SubResource("StyleBoxTexture_o07lh")
+
+[node name="t" type="Button" parent="hint buttons"]
+offset_left = 956.0
+offset_top = 547.0
+offset_right = 1519.0
+offset_bottom = 577.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_762l7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fk471")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m3vf0")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gsdro")
+
+[node name="e" type="Button" parent="hint buttons"]
+offset_left = 953.0
+offset_top = 583.0
+offset_right = 1331.0
+offset_bottom = 614.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_buim4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u2wxl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cmbx5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_le4bg")
+
+[node name="a2" type="Button" parent="hint buttons"]
+offset_left = 959.0
+offset_top = 624.0
+offset_right = 1433.0
+offset_bottom = 653.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sa4e6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ykllr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qwgkr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_tmuy1")
+
+[node name="r2" type="Button" parent="hint buttons"]
+offset_left = 957.0
+offset_top = 661.0
+offset_right = 1435.0
+offset_bottom = 690.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4bgig")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e3yvw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xq7ub")
+theme_override_styles/focus = SubResource("StyleBoxTexture_t4sun")
+
+[node name="y" type="Button" parent="hint buttons"]
+offset_left = 959.0
+offset_top = 699.0
+offset_right = 1411.0
+offset_bottom = 729.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6sq2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vj3lk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jcfmo")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0a2fa")
+
+[node name="s" type="Button" parent="hint buttons"]
+offset_left = 957.0
+offset_top = 735.0
+offset_right = 1332.0
+offset_bottom = 766.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g8rjg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v4lgf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uqia5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ekgto")
+
+[node name="t3" type="Button" parent="hint buttons"]
+offset_left = 957.0
+offset_top = 773.0
+offset_right = 1001.0
+offset_bottom = 802.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xvc03")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgyjq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g215y")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3pyjn")
+
+[node name="e2" type="Button" parent="hint buttons"]
+offset_left = 958.0
+offset_top = 814.0
+offset_right = 1329.0
+offset_bottom = 836.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vpxy6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t8bs4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yduli")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q8kn0")
+
+[node name="p2" type="Button" parent="hint buttons"]
+offset_left = 958.0
+offset_top = 851.0
+offset_right = 1195.0
+offset_bottom = 875.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bvvi7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ccrw5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6exwu")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bw74q")
+
+[node name="j" type="Button" parent="hint buttons"]
+offset_left = 955.0
+offset_top = 54.0
+offset_right = 1748.0
+offset_bottom = 80.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sf1go")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xww0t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ix3pt")
+theme_override_styles/focus = SubResource("StyleBoxTexture_6a11h")
+
+[node name="a3" type="Button" parent="hint buttons"]
+offset_left = 958.0
+offset_top = 90.0
+offset_right = 1333.0
+offset_bottom = 114.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lwbh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ah2be")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gsj7a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_lv505")
+
+[node name="g3" type="Button" parent="hint buttons"]
+anchors_preset = -1
+anchor_right = 0.011
+offset_left = 957.0
+offset_top = 129.0
+offset_right = 1590.88
+offset_bottom = 152.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sih7j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pa1x8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jqtt8")
+theme_override_styles/focus = SubResource("StyleBoxTexture_xdw0e")
+
+[node name="g" type="Button" parent="hint buttons"]
+offset_left = 959.0
+offset_top = 166.0
+offset_right = 1387.0
+offset_bottom = 196.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ml2c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tky0r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5my4n")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4ifk6")
 
 [node name="quit" type="Button" parent="."]
 offset_left = 252.0
@@ -541,6 +1186,35 @@ position = Vector2(387, 366)
 scale = Vector2(1.92012, 1.81273)
 texture = ExtResource("2_jn2l3")
 
+[node name="Blue" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(971.5, 753)
+scale = Vector2(2.17755, 2.92614)
+texture = ExtResource("10_xy5ny")
+
+[connection signal="pressed" from="hint buttons/h" to="." method="_on_h_pressed"]
+[connection signal="pressed" from="hint buttons/a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="hint buttons/l2" to="." method="_on_l_2_pressed"]
+[connection signal="pressed" from="hint buttons/l3" to="." method="_on_l_3_pressed"]
+[connection signal="pressed" from="hint buttons/o3" to="." method="_on_o_3_pressed"]
+[connection signal="pressed" from="hint buttons/i" to="." method="_on_i_pressed"]
+[connection signal="pressed" from="hint buttons/n" to="." method="_on_n_pressed"]
+[connection signal="pressed" from="hint buttons/g2" to="." method="_on_g_2_pressed"]
+[connection signal="pressed" from="hint buttons/o2" to="." method="_on_o_2_pressed"]
+[connection signal="pressed" from="hint buttons/t2" to="." method="_on_t_2_pressed"]
+[connection signal="pressed" from="hint buttons/t" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="hint buttons/e" to="." method="_on_e_pressed"]
+[connection signal="pressed" from="hint buttons/a2" to="." method="_on_a_2_pressed"]
+[connection signal="pressed" from="hint buttons/r2" to="." method="_on_r_2_pressed"]
+[connection signal="pressed" from="hint buttons/y" to="." method="_on_y_pressed"]
+[connection signal="pressed" from="hint buttons/s" to="." method="_on_s_pressed"]
+[connection signal="pressed" from="hint buttons/t3" to="." method="_on_t_3_pressed"]
+[connection signal="pressed" from="hint buttons/e2" to="." method="_on_e_2_pressed"]
+[connection signal="pressed" from="hint buttons/p2" to="." method="_on_p_2_pressed"]
+[connection signal="pressed" from="hint buttons/j" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="hint buttons/a3" to="." method="_on_a_3_pressed"]
+[connection signal="pressed" from="hint buttons/g3" to="." method="_on_g_3_pressed"]
+[connection signal="pressed" from="hint buttons/g" to="." method="_on_g_pressed"]
 [connection signal="mouse_entered" from="quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

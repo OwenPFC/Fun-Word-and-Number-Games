@@ -32,7 +32,7 @@ func _on_connections_pressed():
 
 func _on_credits_pressed():
 	$creditsImage.visible = true
-	$creditsImage/exit.disabled = false
+	$creditsImage/leaveCredits.disabled = false
 
 func _on_exit_pressed():
 	get_tree().quit(0)

@@ -25,27 +25,27 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qooky"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2yv1"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw0ca"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qdjq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vohxu"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugni2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7p5q"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81fen"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4iwn2"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bvr66"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1ctq"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77es6"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5wep"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
@@ -134,7 +134,7 @@ offset_left = -458.424
 offset_top = -296.823
 offset_right = -412.424
 offset_bottom = -213.823
-theme_override_styles/normal = SubResource("StyleBoxTexture_w2yv1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iw0ca")
 text = "G"
 
 [node name="y" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -157,7 +157,7 @@ offset_left = -264.624
 offset_top = -295.622
 offset_right = -214.624
 offset_bottom = -212.622
-theme_override_styles/normal = SubResource("StyleBoxTexture_3qdjq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vohxu")
 text = "B"
 
 [node name="r" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -165,7 +165,7 @@ offset_left = -203.836
 offset_top = -296.709
 offset_right = -153.836
 offset_bottom = -213.709
-theme_override_styles/normal = SubResource("StyleBoxTexture_ugni2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i7p5q")
 text = "R"
 
 [node name="e" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -173,7 +173,7 @@ offset_left = -147.2
 offset_top = -296.073
 offset_right = -97.2002
 offset_bottom = -213.073
-theme_override_styles/normal = SubResource("StyleBoxTexture_81fen")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4iwn2")
 text = "E"
 
 [node name="d2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -181,7 +181,7 @@ offset_left = -88.5648
 offset_top = -296.801
 offset_right = -38.5648
 offset_bottom = -213.801
-theme_override_styles/normal = SubResource("StyleBoxTexture_bvr66")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s1ctq")
 text = "D"
 
 [node name="i" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -203,7 +203,7 @@ offset_left = 79.5879
 offset_top = -295.437
 offset_right = 129.588
 offset_bottom = -212.437
-theme_override_styles/normal = SubResource("StyleBoxTexture_77es6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j5wep")
 text = "P"
 
 [node name="r3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -1334,11 +1334,19 @@ frame_progress = 0.435958
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1205.0
-offset_top = 221.0
+offset_top = 380.0
 offset_right = 1758.0
-offset_bottom = 329.0
+offset_bottom = 488.0
 theme_override_font_sizes/font_size = 40
 text = "Non-word letters remaining: "
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1126.0
+offset_top = 291.0
+offset_right = 1982.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 35
+text = "Click to remove the letters that don't belong!"
 
 [node name="quit" type="Button" parent="."]
 offset_left = 1358.0

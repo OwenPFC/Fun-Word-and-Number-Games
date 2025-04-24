@@ -1,0 +1,476 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvkn3qd4q1cgs"]
+
+[ext_resource type="Script" path="res://connections.gd" id="1_h87k3"]
+[ext_resource type="Texture2D" uid="uid://8j1iyyyy2qsk" path="res://connections assets/beige.png" id="2_66cp1"]
+[ext_resource type="Texture2D" uid="uid://4hktsjlv4y5c" path="res://word search assets/download.png" id="2_j4ajm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y02yo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kivjq"]
+
+[node name="connections" type="Node2D"]
+script = ExtResource("1_h87k3")
+metadata/_edit_vertical_guides_ = [1899.0]
+
+[node name="submit" type="Button" parent="."]
+offset_left = 569.0
+offset_top = 715.0
+offset_right = 681.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 30
+text = "Submit"
+
+[node name="deselect_all" type="Button" parent="."]
+offset_left = 305.0
+offset_top = 712.0
+offset_right = 480.0
+offset_bottom = 762.0
+theme_override_font_sizes/font_size = 30
+text = "Deselect All"
+
+[node name="one_away" type="Label" parent="."]
+visible = false
+offset_left = 424.0
+offset_top = 640.0
+offset_right = 536.0
+offset_bottom = 668.0
+theme_override_font_sizes/font_size = 20
+text = "One away..."
+
+[node name="lives" type="Label" parent="."]
+offset_left = 1025.0
+offset_top = 176.0
+offset_right = 1230.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 20
+text = "Mistakes Remaining: "
+
+[node name="1" type="Sprite2D" parent="lives"]
+position = Vector2(354, 14)
+scale = Vector2(0.495868, 0.497881)
+texture = ExtResource("2_j4ajm")
+
+[node name="2" type="Sprite2D" parent="lives"]
+position = Vector2(644, 27)
+scale = Vector2(0.559917, 0.487288)
+texture = ExtResource("2_j4ajm")
+
+[node name="3" type="Sprite2D" parent="lives"]
+position = Vector2(352, 270)
+scale = Vector2(0.578512, 0.504237)
+texture = ExtResource("2_j4ajm")
+
+[node name="4" type="Sprite2D" parent="lives"]
+position = Vector2(660, 284)
+scale = Vector2(0.561983, 0.508475)
+texture = ExtResource("2_j4ajm")
+
+[node name="make" type="Button" parent="."]
+offset_left = 207.0
+offset_top = 67.0
+offset_right = 295.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y02yo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kivjq")
+text = "make"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="make"]
+show_behind_parent = true
+position = Vector2(45, 22)
+scale = Vector2(0.113636, 0.0596591)
+
+[node name="wake" type="Button" parent="."]
+offset_left = 102.0
+offset_top = 423.0
+offset_right = 262.0
+offset_bottom = 509.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Wake"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="wake"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="eat" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 424.0
+offset_right = 656.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Eat"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="eat"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="pack" type="Button" parent="."]
+offset_left = 295.0
+offset_top = 305.0
+offset_right = 455.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Pack"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="pack"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="shower" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 187.0
+offset_right = 260.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Shower"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="shower"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="macbeth" type="Button" parent="."]
+offset_left = 703.0
+offset_top = 187.0
+offset_right = 863.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Macbeth"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="macbeth"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="umbrella" type="Button" parent="."]
+offset_left = 701.0
+offset_top = 426.0
+offset_right = 861.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Umbrella"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="umbrella"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="salt" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 308.0
+offset_right = 656.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Salt"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="salt"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="fog" type="Button" parent="."]
+offset_left = 297.0
+offset_top = 530.0
+offset_right = 457.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Fog"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="fog"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="four" type="Button" parent="."]
+offset_left = 174.0
+offset_top = 66.0
+offset_right = 207.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y02yo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kivjq")
+text = "4,"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="four"]
+show_behind_parent = true
+position = Vector2(16, 27)
+scale = Vector2(0.0298295, 0.0454546)
+
+[node name="pick" type="Button" parent="."]
+offset_left = 107.0
+offset_top = 67.0
+offset_right = 173.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y02yo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kivjq")
+text = "Pick"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="pick"]
+show_behind_parent = true
+position = Vector2(32.5, 22)
+scale = Vector2(0.0894886, 0.0596591)
+
+[node name="blow" type="Button" parent="."]
+offset_left = 498.0
+offset_top = 531.0
+offset_right = 658.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Blow"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="blow"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="snort" type="Button" parent="."]
+offset_left = 101.0
+offset_top = 305.0
+offset_right = 261.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Snort"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="snort"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="sniff" type="Button" parent="."]
+offset_left = 701.0
+offset_top = 308.0
+offset_right = 861.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Sniff"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="sniff"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="shoot" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 187.0
+offset_right = 656.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Shoot"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="shoot"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="connections" type="Button" parent="."]
+offset_left = 292.0
+offset_top = 67.0
+offset_right = 483.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y02yo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kivjq")
+text = "connections!"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="connections"]
+show_behind_parent = true
+position = Vector2(98, 22.5)
+scale = Vector2(0.261364, 0.0610796)
+
+[node name="wordsearch" type="Button" parent="."]
+offset_left = 703.0
+offset_top = 532.0
+offset_right = 863.0
+offset_bottom = 618.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Wordsearch"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="wordsearch"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="crossword" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 187.0
+offset_right = 456.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Crossword"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="crossword"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="sudoku" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 423.0
+offset_right = 456.0
+offset_bottom = 509.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Sudoku"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="sudoku"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[node name="maze" type="Button" parent="."]
+offset_left = 104.0
+offset_top = 530.0
+offset_right = 264.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Maze"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="maze"]
+show_behind_parent = true
+position = Vector2(80, 43.625)
+scale = Vector2(0.227273, 0.120384)
+texture = ExtResource("2_66cp1")
+
+[connection signal="pressed" from="deselect_all" to="." method="_on_deselect_all_pressed"]
+[connection signal="pressed" from="make" to="." method="_on_make_pressed"]
+[connection signal="pressed" from="wake" to="." method="_on_wake_pressed"]
+[connection signal="pressed" from="eat" to="." method="_on_eat_pressed"]
+[connection signal="pressed" from="pack" to="." method="_on_pack_pressed"]
+[connection signal="pressed" from="shower" to="." method="_on_shower_pressed"]
+[connection signal="pressed" from="macbeth" to="." method="_on_macbeth_pressed"]
+[connection signal="pressed" from="umbrella" to="." method="_on_umbrella_pressed"]
+[connection signal="pressed" from="salt" to="." method="_on_salt_pressed"]
+[connection signal="pressed" from="fog" to="." method="_on_fog_pressed"]
+[connection signal="pressed" from="four" to="." method="_on_four_pressed"]
+[connection signal="pressed" from="pick" to="." method="_on_pick_pressed"]
+[connection signal="pressed" from="blow" to="." method="_on_blow_pressed"]
+[connection signal="pressed" from="snort" to="." method="_on_snort_pressed"]
+[connection signal="pressed" from="sniff" to="." method="_on_sniff_pressed"]
+[connection signal="pressed" from="shoot" to="." method="_on_shoot_pressed"]
+[connection signal="pressed" from="connections" to="." method="_on_connections_pressed"]
+[connection signal="pressed" from="wordsearch" to="." method="_on_wordsearch_pressed"]
+[connection signal="pressed" from="crossword" to="." method="_on_crossword_pressed"]
+[connection signal="pressed" from="sudoku" to="." method="_on_sudoku_pressed"]
+[connection signal="pressed" from="maze" to="." method="_on_maze_pressed"]

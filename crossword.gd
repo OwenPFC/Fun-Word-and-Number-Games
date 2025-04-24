@@ -1,10 +1,5 @@
 extends Node2D
 
-"""
-I think what we can do is name nodes like a,a1,a2, whatever, and there must be a node getname function where
-we then just take the first letter and see if it matches with the input letter
-"""
-
 @onready var h = $h
 @onready var a = $a
 @onready var l2 = $l2
@@ -128,7 +123,7 @@ func _input(event):
 						activeBox = activeWord[boxIndex+1]
 						boxIndex+=1
 		activeBox.grab_focus()
-	elif(Input.is_action_just_released("click") and !mouseInExit):
+	elif(Input.is_action_just_released("click") and !mouseInExit and !$quitScreen.visible):
 		activeBox = get_viewport().gui_get_focus_owner()
 		activeBox.grab_focus()
 		chooseActiveWord()
@@ -137,20 +132,21 @@ func _input(event):
 
 func chooseActiveWord():
 	unHighlightBox()
-	if(Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down") or (Input.is_action_just_released("click") and !mouseInExit)):
-		if(wordsIn.get(activeBox)[0]!=[]):
-			activeWord = wordsIn.get(activeBox)[0]
+	if(Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down") or (Input.is_action_just_released("click") and activeBox is LineEdit and !mouseInExit) and !$quitScreen.visible):
+		if(wordsIn.get(activeBox,h)[0]!=[]):
+			activeWord = wordsIn.get(activeBox,h)[0]
 			activeDirection = "vert"
 		else:
-			activeWord = wordsIn.get(activeBox)[1]
+			activeWord = wordsIn.get(activeBox,h)[1]
 			activeDirection = "horiz"
-	if(Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right") or (Input.is_action_just_released("click") and !mouseInExit)):
-		if(wordsIn.get(activeBox)[1]!=[]):
-			activeWord = wordsIn.get(activeBox)[1]
+	if(Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right") or (Input.is_action_just_released("click") and activeBox is LineEdit and !mouseInExit) and !$quitScreen.visible):
+		if(wordsIn.get(activeBox,h)[1]!=[]):
+			activeWord = wordsIn.get(activeBox,h)[1]
 			activeDirection = "horiz"
 		else:
-			activeWord = wordsIn.get(activeBox)[0]
-			activeDirection = "vert"
+			if(activeBox is LineEdit):
+				activeWord = wordsIn.get(activeBox,h)[0]
+				activeDirection = "vert"
 	boxIndex = activeWord.find(activeBox)
 	highlightBox()
 	
@@ -216,3 +212,97 @@ func _on_return_mouse_entered():
 
 func _on_return_mouse_exited():
 	mouseInExit = false
+
+
+func _on_h_pressed():
+	activeBox = $h
+	chooseActiveWord()
+
+
+func _on_a_pressed():
+	activeBox =$a
+	chooseActiveWord()
+
+func _on_l_2_pressed():
+	activeBox =$l2
+	chooseActiveWord()
+
+func _on_l_3_pressed():
+	activeBox =$l3
+	chooseActiveWord()
+
+func _on_o_3_pressed():
+	activeBox =$o3
+	chooseActiveWord()
+
+func _on_i_pressed():
+	activeBox =$i
+	chooseActiveWord()
+
+func _on_n_pressed():
+	activeBox =$n
+	chooseActiveWord()
+
+func _on_g_2_pressed():
+	activeBox =$g2
+	chooseActiveWord()
+
+func _on_o_2_pressed():
+	activeBox =$o2
+	chooseActiveWord()
+
+func _on_t_2_pressed():
+	activeBox =$t2
+	chooseActiveWord()
+
+func _on_t_pressed():
+	activeBox =$t
+	chooseActiveWord()
+
+func _on_e_pressed():
+	activeBox =$e
+	chooseActiveWord()
+
+func _on_a_2_pressed():
+	activeBox =$a2
+	chooseActiveWord()
+
+func _on_r_2_pressed():
+	activeBox =$r2
+	chooseActiveWord()
+
+func _on_y_pressed():
+	activeBox =$y
+	chooseActiveWord()
+
+func _on_s_pressed():
+	activeBox =$s
+	chooseActiveWord()
+
+func _on_t_3_pressed():
+	activeBox =$t3
+	chooseActiveWord()
+
+func _on_e_2_pressed():
+	activeBox =$e2
+	chooseActiveWord()
+
+func _on_p_2_pressed():
+	activeBox =$p2
+	chooseActiveWord()
+
+func _on_j_pressed():
+	activeBox =$j
+	chooseActiveWord()
+
+func _on_a_3_pressed():
+	activeBox =$a3
+	chooseActiveWord()
+
+func _on_g_3_pressed():
+	activeBox =$g3
+	chooseActiveWord()
+
+func _on_g_pressed():
+	activeBox =$g
+	chooseActiveWord()
