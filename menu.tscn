@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8he0uoidp63l"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_e6tjr"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_e6tjr")
+
+[node name="sodoku" type="Button" parent="."]
+offset_left = 528.0
+offset_top = 119.0
+offset_right = 609.0
+offset_bottom = 177.0
+text = "sodoku"
+
+[node name="crossword" type="Button" parent="."]
+offset_left = 236.0
+offset_top = 130.0
+offset_right = 353.0
+offset_bottom = 203.0
+text = "crossword"
+
+[node name="wordsearch" type="Button" parent="."]
+offset_left = 412.0
+offset_top = 284.0
+offset_right = 513.0
+offset_bottom = 375.0
+text = "wordsearch"
+
+[node name="connections" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 217.0
+offset_right = 165.0
+offset_bottom = 320.0
+text = "connections"
+
+[node name="credits" type="Button" parent="."]
+offset_left = 690.0
+offset_top = 277.0
+offset_right = 820.0
+offset_bottom = 367.0
+text = "credits"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 336.0
+offset_right = 334.0
+offset_bottom = 404.0
+text = "quit"
+
+[node name="creditsImage" type="Sprite2D" parent="."]
+
+[node name="LinkButton" type="LinkButton" parent="creditsImage"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="leaveCredits" type="Button" parent="creditsImage"]
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
+
+[connection signal="pressed" from="sodoku" to="." method="_on_sodoku_pressed"]
+[connection signal="pressed" from="crossword" to="." method="_on_crossword_pressed"]
+[connection signal="pressed" from="wordsearch" to="." method="_on_wordsearch_pressed"]
+[connection signal="pressed" from="connections" to="." method="_on_connections_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

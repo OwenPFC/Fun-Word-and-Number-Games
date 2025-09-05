@@ -1,0 +1,22 @@
+extends TextEdit
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _checkBox():
+	if($".".text=="III"):
+		Global._incNumCorrect()
+	#else:
+		#Global._decNumCorrect()
+		
+func _on_text_changed():
+	_checkBox()
+
+
+#func _on_gui_input(event):
+	#pass # Replace with function body.
