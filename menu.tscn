@@ -1,66 +1,283 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8he0uoidp63l"]
+[gd_scene load_steps=16 format=3 uid="uid://b8he0uoidp63l"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_e6tjr"]
+[ext_resource type="Texture2D" uid="uid://ggfb1chirfi3" path="res://collection_menu.png" id="2_0qw7j"]
+[ext_resource type="Texture2D" uid="uid://bmo7wu10dhv7y" path="res://connections assets/grey.png" id="3_lu0ic"]
+[ext_resource type="Texture2D" uid="uid://tniiwxlysru5" path="res://credits 2.png" id="4_441q3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oew3c"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j2hjg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3bs58"]
+texture = SubResource("CanvasTexture_j2hjg")
+modulate_color = Color(0, 0.698039, 0.890196, 0.678431)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fnrn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k068j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4y8cq"]
+texture = SubResource("CanvasTexture_k068j")
+modulate_color = Color(0.972549, 0.588235, 0.105882, 0.898039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl3ig"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6exko"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02jcv"]
+texture = SubResource("CanvasTexture_6exko")
+modulate_color = Color(0.690196, 0.0941176, 0, 0.788235)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_02fhr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k8yrl"]
+texture = SubResource("CanvasTexture_02fhr")
+modulate_color = Color(0, 0.392157, 0, 1)
 
 [node name="menu" type="Node2D"]
 script = ExtResource("1_e6tjr")
 
+[node name="CollectionMenu" type="Sprite2D" parent="."]
+position = Vector2(602, 301)
+scale = Vector2(1.0541, 1.08333)
+texture = ExtResource("2_0qw7j")
+
 [node name="sodoku" type="Button" parent="."]
-offset_left = 528.0
-offset_top = 119.0
-offset_right = 609.0
-offset_bottom = 177.0
-text = "sodoku"
+offset_left = 875.0
+offset_top = -131.0
+offset_right = 1262.0
+offset_bottom = 235.0
+rotation = 0.66386
+flat = true
 
 [node name="crossword" type="Button" parent="."]
-offset_left = 236.0
-offset_top = 130.0
-offset_right = 353.0
-offset_bottom = 203.0
-text = "crossword"
+offset_left = 129.0
+offset_top = 349.0
+offset_right = 408.0
+offset_bottom = 637.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_oew3c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3bs58")
 
 [node name="wordsearch" type="Button" parent="."]
-offset_left = 412.0
-offset_top = 284.0
-offset_right = 513.0
-offset_bottom = 375.0
-text = "wordsearch"
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 211.0
+offset_bottom = 275.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2fnrn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4y8cq")
+
+[node name="wordsearch_warning" type="Label" parent="."]
+visible = false
+offset_left = 119.0
+offset_top = 239.0
+offset_right = 477.0
+offset_bottom = 267.0
+theme_override_font_sizes/font_size = 20
+text = "WARNING: THIS ONE IS REALLY HARD"
 
 [node name="connections" type="Button" parent="."]
-offset_left = 67.0
-offset_top = 217.0
-offset_right = 165.0
-offset_bottom = 320.0
-text = "connections"
+offset_left = 772.0
+offset_top = 350.0
+offset_right = 1042.0
+offset_bottom = 618.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tl3ig")
+theme_override_styles/hover = SubResource("StyleBoxTexture_02jcv")
 
 [node name="credits" type="Button" parent="."]
-offset_left = 690.0
-offset_top = 277.0
-offset_right = 820.0
-offset_bottom = 367.0
-text = "credits"
+offset_left = 526.0
+offset_top = 510.0
+offset_right = 656.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_k8yrl")
+text = "Credits"
 
 [node name="exit" type="Button" parent="."]
-offset_left = 252.0
-offset_top = 336.0
-offset_right = 334.0
-offset_bottom = 404.0
+visible = false
+offset_left = 52.0
+offset_top = 568.0
+offset_right = 134.0
+offset_bottom = 636.0
 text = "quit"
 
 [node name="creditsImage" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(598, 331.5)
+scale = Vector2(1.76705, 0.992898)
+texture = ExtResource("3_lu0ic")
 
 [node name="LinkButton" type="LinkButton" parent="creditsImage"]
-offset_right = 40.0
-offset_bottom = 40.0
+top_level = true
+offset_left = 18.0
+offset_top = 77.0
+offset_right = 506.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Popbot - Music"
+uri = "https://popbot.work/"
 
 [node name="leaveCredits" type="Button" parent="creditsImage"]
-offset_right = 8.0
-offset_bottom = 8.0
+top_level = true
+offset_left = 7.0
+offset_top = 563.0
+offset_right = 148.0
+offset_bottom = 648.0
 disabled = true
+text = "Return"
 
+[node name="LinkButton2" type="LinkButton" parent="creditsImage"]
+top_level = true
+offset_left = 16.0
+offset_top = 157.0
+offset_right = 489.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Amfivolia- Music"
+uri = "https://soundcloud.com/amfivolia"
+
+[node name="LinkButton3" type="LinkButton" parent="creditsImage"]
+top_level = true
+offset_left = 22.0
+offset_top = 239.0
+offset_right = 339.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Lukasipo - Music"
+uri = "https://soundcloud.com/lukasipo?ref=clipboard&p=i&c=0&si=671439A68D164B0D97FC5506539323D6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+
+[node name="Credits2" type="Sprite2D" parent="creditsImage"]
+position = Vector2(116.579, -9.56794)
+scale = Vector2(0.467579, 0.900546)
+texture = ExtResource("4_441q3")
+
+[node name="bird1" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 494.0
+offset_top = 37.0
+offset_right = 982.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Schuhschnabel_(Balaeniceps_rex).jpg"
+
+[node name="bird2" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 496.0
+offset_top = 91.0
+offset_right = 1037.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_qtl3.jpg"
+
+[node name="Griller" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 497.0
+offset_top = 151.0
+offset_right = 1098.0
+offset_bottom = 187.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla)_closeup_eating.jpg"
+
+[node name="tiger" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 495.0
+offset_top = 204.0
+offset_right = 1142.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Angry_tiger.jpg"
+
+[node name="kitty" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 494.0
+offset_top = 275.0
+offset_right = 1106.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Angry_cat_picture.jpg"
+
+[node name="happy griller" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 488.0
+offset_top = 324.0
+offset_right = 1002.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:G._g._gorilla,_Krefeld_(DE)_--_2023_--_0465.jpg"
+
+[node name="dawg" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 492.0
+offset_top = 382.0
+offset_right = 1080.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Wikipedia_editor_hat_w_dog.JPG"
+
+[node name="dog" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 496.0
+offset_top = 433.0
+offset_right = 1094.0
+offset_bottom = 468.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:New_Guinea_Singing_Dog_-_male_puppy.jpg"
+
+[node name="duck" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 496.0
+offset_top = 491.0
+offset_right = 1094.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Adult_white_call_duck_drake.jpg"
+
+[node name="monke" type="LinkButton" parent="creditsImage/Credits2"]
+top_level = true
+offset_left = 501.0
+offset_top = 545.0
+offset_right = 1099.0
+offset_bottom = 596.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+uri = "https://commons.wikimedia.org/wiki/File:Macaca_fascicularis_in_Tarutao_National_Marine_Park.jpg"
+
+[node name="Label" type="Label" parent="creditsImage"]
+top_level = true
+offset_left = 51.0
+offset_top = 329.0
+offset_right = 224.0
+offset_bottom = 509.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "CLICK THESE LINKS. THANK YOU FOR LETTING
+US USE YOUR MUSIC"
+autowrap_mode = 2
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+
+[connection signal="mouse_entered" from="sodoku" to="." method="_on_sodoku_mouse_entered"]
+[connection signal="mouse_exited" from="sodoku" to="." method="_on_sodoku_mouse_exited"]
 [connection signal="pressed" from="sodoku" to="." method="_on_sodoku_pressed"]
 [connection signal="pressed" from="crossword" to="." method="_on_crossword_pressed"]
+[connection signal="mouse_entered" from="wordsearch" to="." method="_on_wordsearch_mouse_entered"]
+[connection signal="mouse_exited" from="wordsearch" to="." method="_on_wordsearch_mouse_exited"]
 [connection signal="pressed" from="wordsearch" to="." method="_on_wordsearch_pressed"]
 [connection signal="pressed" from="connections" to="." method="_on_connections_pressed"]
 [connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="creditsImage/leaveCredits" to="." method="_on_leave_credits_pressed"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

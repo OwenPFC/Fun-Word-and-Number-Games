@@ -1,9 +1,19 @@
 extends Node2D
 
+@onready var blueColor = load("res://connections assets/blueReal.png")
+@onready var greenColor = load("res://connections assets/green.png")
+@onready var hellColor = load("res://connections assets/hell.png")
+@onready var purpleColor = load("res://connections assets/purple.png")
+@onready var yellowColor = load("res://connections assets/yellow.png")
+
+@onready var music = $music
+@onready var song = load("res://music/12 - the song of song 2.wav")
+@onready var song2 = load("res://music/14 - song of song john riddim remix.wav")
+
 @onready var make = $make
-@onready var wake = $wake
-@onready var eat = $eat
-@onready var pack = $pack
+@onready var work = $work
+@onready var morning = $morning
+@onready var fon = $fon
 @onready var shower = $shower
 @onready var macbeth = $macbeth
 @onready var fog = $fog
@@ -21,11 +31,13 @@ extends Node2D
 @onready var sudoku = $sudoku
 @onready var connections = $connections
 
+@onready var explosion8 = $explosion8
+
 @onready var connectionDict = {
-	make:"up",
-	wake:"up",
-	eat:"up",
-	pack:"up",
+	make:"do",
+	work:"do",
+	morning:"do",
+	fon:"do",
 	shower:"x",
 	macbeth:"bad",
 	umbrella:"bad",
@@ -44,23 +56,70 @@ extends Node2D
 	maze:"x"
 }
 	
-	
-
 @onready var beige = load("res://connections assets/beige.png")
 @onready var grey = load("res://connections assets/grey.png")
 
+var explosionSound = load("res://word search assets/mixkit-epic-impact-afar-explosion-2782.wav")
+@onready var sound = $explosionSound
+
+@onready var life1 = $life1
+@onready var life2 = $life2
+@onready var life3 = $life3
+@onready var life4 = $life4
+
+@onready var yellow = $yellow
+@onready var green = $green
+@onready var blue = $blue
+@onready var purple = $purple
+@onready var hell = $hell
+
+@onready var lives = [life1,life2,life3,life4]
+@onready var activeLife = life1
+
 var activeList = []
+var categories = ["this","do","bad","nose","x"]
+
+@onready var categoryDict = {"this":yellow,"nose":green,"bad":blue,"do":purple,"x":hell}
+@onready var colorDict = {yellow:yellowColor,green:greenColor,blue:blueColor,purple:purpleColor,hell:hellColor}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	music.stream = song
+	music.play()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
 	
+	if(len(activeList) == 4):
+		$submit.disabled = false
+	else:
+		$submit.disabled = true
 	
+	if(len(lives) == 0):
+		$lose.disabled = false
+		$lose.visible = true
+		
+	if($yellow.visible and $green.visible and $blue.visible and $purple.visible and $hell.visible):
+		$win.disabled = false
+		$win.visible = true
+	
+func loseLife():
+	print("hello")
+	if(len(lives) > 0):
+		activeLife = lives[0]
+		lives.remove_at(0)
+		
+		explosion8.global_position.x = activeLife.global_position.x
+		explosion8.global_position.y = activeLife.global_position.y
+		explosion8.visible = true
+		explosion8.play("explosion")
+		sound.stream = explosionSound
+		sound.play()
+		activeLife.visible = false
+
+
 func calculateCorrect():
 	if(len(activeList) == 4):
 		var category = connectionDict.get(activeList[0])
@@ -70,17 +129,35 @@ func calculateCorrect():
 				numCorrect+=1
 		if(numCorrect == 3):
 			$one_away.visible = true
+			return false
 		elif(numCorrect == 4):
 			return true
 		else:
 			return false
 			
-func loseLife():
-	pass
+func winCategory():
+	var category = connectionDict.get(activeList[0])
+	var color = categoryDict.get(category)
+	color.visible = true
+	
+	if(category == "this"):
+		$this.visible = true
+	elif(category == "nose"):
+		$nose.visible = true
+	elif(category == "bad"):
+		$bad.visible = true
+	elif(category == "do"):
+		$do.visible = true
+	elif(category == "x"):
+		$x.visible = true
 	
 	
 	
-	
+	for word in activeList:
+		word.get_child(0).texture = colorDict.get(color)
+		word.disabled = true
+		
+	activeList = []
 	
 func chooseHighlight(button:Button):
 	button.set("theme_override_colors/font_color", Color(0, 0, 0))
@@ -100,29 +177,29 @@ func _on_make_pressed():
 
 
 func _on_wake_pressed():
-	if(wake in activeList):
-		activeList.remove_at(activeList.find(wake))
+	if(work in activeList):
+		activeList.remove_at(activeList.find(work))
 	else:
 		if(len(activeList)<4):
-			activeList.append(wake)
-	chooseHighlight(wake)
+			activeList.append(work)
+	chooseHighlight(work)
 
 func _on_eat_pressed():
-	if(eat in activeList):
-		activeList.remove_at(activeList.find(eat))
+	if(morning in activeList):
+		activeList.remove_at(activeList.find(morning))
 	else:
 		if(len(activeList)<4):
-			activeList.append(eat)
-	chooseHighlight(eat)
+			activeList.append(morning)
+	chooseHighlight(morning)
 
 
 func _on_pack_pressed():
-	if(pack in activeList):
-		activeList.remove_at(activeList.find(pack))
+	if(fon in activeList):
+		activeList.remove_at(activeList.find(fon))
 	else:
 		if(len(activeList)<4):
-			activeList.append(pack)
-	chooseHighlight(pack)
+			activeList.append(fon)
+	chooseHighlight(fon)
 
 
 func _on_shower_pressed():
@@ -265,6 +342,50 @@ func _on_connections_pressed():
 	chooseHighlight(connections)
 
 func _on_deselect_all_pressed():
-	for word in activeList:
-		activeList.remove_at(activeList.find_child())
+	while(len(activeList)>0):
+		var temp = activeList[0]
+		activeList.remove_at(0)
+		chooseHighlight(temp)
 	activeList = []
+
+func _on_submit_pressed():
+	if($one_away.visible):
+		$one_away.visible = false
+	if(!calculateCorrect()):
+		loseLife()
+	else:
+		winCategory()
+		
+
+
+func _on_lose_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_win_pressed():
+	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_quit_pressed():
+	$exit.disabled = false
+	$exit.visible = true
+	$exit/return.disabled = false
+
+func _on_return_pressed():
+	$exit.disabled = true
+	$exit.visible = false
+	$exit/return.disabled = true
+
+
+func _on_exit_pressed():
+	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_music_finished():
+	music.stream = song2
+	music.play()
+
+
+func _on_duck_timer_timeout():
+	print("duckman")
+	$win/Duck.flip_h = !$win/Duck.flip_h

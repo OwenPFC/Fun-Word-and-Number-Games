@@ -1,4 +1,5 @@
 extends TextEdit
+
 var boxCorrect = false
 
 # Called when the node enters the scene tree for the first time.
@@ -12,3 +13,14 @@ func _process(delta):
 func _checkBox():
 	if($".".text=="III"):
 		Global._incNumCorrect()
+		boxCorrect = true
+	if($".".text!="III" and boxCorrect):
+		Global._deNumCorrect()
+		boxCorrect = false
+		
+func _on_text_changed():
+	_checkBox()
+
+
+#func _on_gui_input(event):
+	#pass # Replace with function body.

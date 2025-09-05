@@ -13,3 +13,10 @@ func _process(delta):
 func _checkBox():
 	if($".".text=="III"):
 		Global._incNumCorrect()
+		boxCorrect = true
+	if($".".text!="III" and boxCorrect):
+		Global._deNumCorrect()
+		boxCorrect = false
+
+func _on_text_changed():
+	_checkBox()

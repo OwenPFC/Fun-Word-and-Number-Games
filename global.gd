@@ -16,3 +16,6 @@ func _incNumCorrect():
 	
 func getNumCorrect():
 	return numCorrect
+
+func _deNumCorrect():
+	numCorrect-=1

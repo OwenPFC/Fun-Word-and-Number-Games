@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7yqcsrgekhkn"
+path="res://.godot/imported/12 - the song of song 2.wav-1ea3d832501944b29195a07590584b05.sample"
+
+[deps]
+
+source_file="res://music/12 - the song of song 2.wav"
+dest_files=["res://.godot/imported/12 - the song of song 2.wav-1ea3d832501944b29195a07590584b05.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

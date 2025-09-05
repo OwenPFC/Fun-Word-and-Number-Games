@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmp2gh8uvu3pn"]
+[gd_scene load_steps=25 format=3 uid="uid://cmp2gh8uvu3pn"]
 
 [ext_resource type="Script" path="res://sodoku.gd" id="1_ise78"]
 [ext_resource type="Texture2D" uid="uid://bbfyvnc3ee3jj" path="res://sodoku assets/better better easier board.png" id="2_encrp"]
@@ -20,12 +20,17 @@
 [ext_resource type="Script" path="res://(4,4).gd" id="18_nl8w5"]
 [ext_resource type="Script" path="res://(8,7).gd" id="19_wbsyc"]
 [ext_resource type="Script" path="res://(7,6).gd" id="20_0jwk2"]
+[ext_resource type="Texture2D" uid="uid://bmo7wu10dhv7y" path="res://connections assets/grey.png" id="21_13a62"]
+[ext_resource type="Texture2D" uid="uid://s1q0lu4wc67d" path="res://miso cat.png" id="21_c437e"]
+[ext_resource type="Texture2D" uid="uid://jow2ewakglcp" path="res://connections assets/blue.png" id="21_n1b8g"]
+[ext_resource type="Texture2D" uid="uid://hjalwdkwdjdh" path="res://connections assets/pink.png" id="24_5w81j"]
 
 [node name="Sodoku" type="Node2D"]
 script = ExtResource("1_ise78")
 
 [node name="SodokuBoard" type="Sprite2D" parent="."]
-position = Vector2(3, -13)
+top_level = true
+position = Vector2(565, 331)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_encrp")
 script = ExtResource("3_xrgyb")
@@ -238,4 +243,107 @@ theme_override_font_sizes/font_size = 40
 scroll_fit_content_height = true
 script = ExtResource("20_0jwk2")
 
-[connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard" method="_on__text_changed"]
+[node name="music" type="AudioStreamPlayer" parent="."]
+
+[node name="Grey" type="Sprite2D" parent="."]
+modulate = Color(1, 0.286275, 0.823529, 0.764706)
+position = Vector2(526.5, 310.5)
+scale = Vector2(2.30256, 1.18324)
+texture = ExtResource("21_13a62")
+
+[node name="MisoCat" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.533333)
+position = Vector2(443, 389)
+scale = Vector2(1.94967, 1)
+texture = ExtResource("21_c437e")
+
+[node name="quit" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 590.0
+offset_right = 162.0
+offset_bottom = 621.0
+text = "QUIT"
+
+[node name="text background" type="Sprite2D" parent="."]
+modulate = Color(0.462745, 0.298039, 1, 1)
+position = Vector2(161, 44.5)
+scale = Vector2(0.229299, 0.0894886)
+texture = ExtResource("21_n1b8g")
+
+[node name="text background2" type="Sprite2D" parent="."]
+modulate = Color(0.462745, 0.298039, 1, 1)
+position = Vector2(907, 37)
+scale = Vector2(0.364665, 0.0892314)
+texture = ExtResource("21_n1b8g")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 30.0
+offset_right = 101.0
+offset_bottom = 53.0
+text = "Correct:"
+
+[node name="instructions" type="Label" parent="."]
+offset_left = 697.0
+offset_top = 22.0
+offset_right = 1105.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 20
+text = "Click on a box to type the Roman Numeral"
+
+[node name="win button" type="Button" parent="."]
+visible = false
+top_level = true
+offset_left = 368.0
+offset_top = 553.0
+offset_right = 781.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 35
+text = "PLAY MORE FUN GAMES"
+
+[node name="Sprite2D" type="Sprite2D" parent="win button"]
+modulate = Color(0.848261, 0.000568713, 0.848255, 1)
+show_behind_parent = true
+position = Vector2(250, -206)
+scale = Vector2(1.45223, 1.4233)
+texture = ExtResource("24_5w81j")
+
+[node name="Label" type="Label" parent="win button"]
+layout_mode = 0
+offset_left = -285.0
+offset_top = -526.0
+offset_right = 742.0
+offset_bottom = -457.0
+theme_override_font_sizes/font_size = 50
+text = "CONGRATULATIONS!! YOU BEAT SODODKU"
+
+[node name="cat" type="Sprite2D" parent="win button"]
+position = Vector2(206, -230)
+scale = Vector2(0.53337, 0.489356)
+texture = ExtResource("21_c437e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[connection signal="text_changed" from="SodokuBoard/(6,4)" to="SodokuBoard/(6,4)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,5)" to="SodokuBoard/(4,5)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,3)" to="SodokuBoard/(0,3)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(2,4)" to="SodokuBoard/(2,4)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(7,3)" to="SodokuBoard/(7,3)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,7)" to="SodokuBoard/(4,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,2)" to="SodokuBoard/(4,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(1,2)" to="SodokuBoard/(1,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(1,0)" to="SodokuBoard/(1,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(6,2)" to="SodokuBoard/(6,2)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(3,0)" to="SodokuBoard/(3,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,7)" to="SodokuBoard/(0,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(8,0)" to="SodokuBoard/(8,0)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(0,8)" to="SodokuBoard/(0,8)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(4,4)" to="SodokuBoard/(4,4)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(8,7)" to="SodokuBoard/(8,7)" method="_on_text_changed"]
+[connection signal="text_changed" from="SodokuBoard/(7,6)" to="SodokuBoard/(7,6)" method="_on_text_changed"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="win button" to="." method="_on_win_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

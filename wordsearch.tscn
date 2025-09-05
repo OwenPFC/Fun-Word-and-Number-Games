@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b2f36kn3ye6ae"]
+[gd_scene load_steps=45 format=3 uid="uid://b2f36kn3ye6ae"]
 
 [ext_resource type="Script" path="res://wordsearch.gd" id="1_08m1n"]
 [ext_resource type="Texture2D" uid="uid://botpdrex1ey10" path="res://word search assets/crossword base.png" id="2_6qs8d"]
@@ -22,30 +22,37 @@
 [ext_resource type="Texture2D" uid="uid://b7ypm42lx0ofo" path="res://word search assets/explosion/15.png" id="19_y6u5s"]
 [ext_resource type="Texture2D" uid="uid://ctw1poeyox17s" path="res://word search assets/explosion/16.png" id="20_lh2v4"]
 [ext_resource type="Texture2D" uid="uid://bus0lhd1lmc1r" path="res://crossword assets/blue.png" id="22_42xi5"]
+[ext_resource type="Texture2D" uid="uid://l6w1ej6bk733" path="res://animals/bird1.png" id="22_k6fvp"]
+[ext_resource type="Texture2D" uid="uid://c33eanqrnf2ju" path="res://animals/bird2.png" id="24_6rfy5"]
+[ext_resource type="Texture2D" uid="uid://cbghi5j8ti2w1" path="res://connections assets/orange.png" id="25_fbk66"]
+[ext_resource type="Texture2D" uid="uid://b0ljqaslb85pb" path="res://animals/monke.png" id="26_f5i74"]
+[ext_resource type="Texture2D" uid="uid://c62mtw7fm1nq0" path="res://crossword assets/thumb 2.png" id="27_kvnb3"]
+[ext_resource type="Texture2D" uid="uid://sg35hc273fki" path="res://animals/dog.png" id="28_3n1kf"]
+[ext_resource type="Texture2D" uid="uid://bf1bhluiy8o1v" path="res://connections assets/brown.png" id="28_t626a"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qooky"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw0ca"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pooa8"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vohxu"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1k2b"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7p5q"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_edymt"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4iwn2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4w8dh"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1ctq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq32g"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5wep"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oo12j"]
 resource_local_to_scene = true
 texture = SubResource("CanvasTexture_qooky")
 
@@ -125,8 +132,8 @@ metadata/_edit_horizontal_guides_ = [-349.0, 83.0]
 metadata/_edit_vertical_guides_ = [1913.0, 458.0, 526.0, 587.0, 643.0, 698.0, 757.0, 825.0, 884.0, 960.0, 1040.0, 1133.0, 1142.0, 1017.0]
 
 [node name="CrosswordBase" type="Sprite2D" parent="."]
-position = Vector2(565.25, 477.75)
-scale = Vector2(1.07597, 1.57249)
+position = Vector2(282.375, 277.125)
+scale = Vector2(0.533516, 0.783773)
 texture = ExtResource("2_6qs8d")
 
 [node name="g" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -134,7 +141,7 @@ offset_left = -458.424
 offset_top = -296.823
 offset_right = -412.424
 offset_bottom = -213.823
-theme_override_styles/normal = SubResource("StyleBoxTexture_iw0ca")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pooa8")
 text = "G"
 
 [node name="y" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -157,7 +164,7 @@ offset_left = -264.624
 offset_top = -295.622
 offset_right = -214.624
 offset_bottom = -212.622
-theme_override_styles/normal = SubResource("StyleBoxTexture_vohxu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u1k2b")
 text = "B"
 
 [node name="r" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -165,7 +172,7 @@ offset_left = -203.836
 offset_top = -296.709
 offset_right = -153.836
 offset_bottom = -213.709
-theme_override_styles/normal = SubResource("StyleBoxTexture_i7p5q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_edymt")
 text = "R"
 
 [node name="e" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -173,7 +180,7 @@ offset_left = -147.2
 offset_top = -296.073
 offset_right = -97.2002
 offset_bottom = -213.073
-theme_override_styles/normal = SubResource("StyleBoxTexture_4iwn2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4w8dh")
 text = "E"
 
 [node name="d2" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -181,7 +188,7 @@ offset_left = -88.5648
 offset_top = -296.801
 offset_right = -38.5648
 offset_bottom = -213.801
-theme_override_styles/normal = SubResource("StyleBoxTexture_s1ctq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bq32g")
 text = "D"
 
 [node name="i" parent="CrosswordBase" instance=ExtResource("3_kpad2")]
@@ -203,7 +210,7 @@ offset_left = 79.5879
 offset_top = -295.437
 offset_right = 129.588
 offset_bottom = -212.437
-theme_override_styles/normal = SubResource("StyleBoxTexture_j5wep")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oo12j")
 text = "P"
 
 [node name="r3" parent="CrosswordBase" instance=ExtResource("2_bw4ay")]
@@ -1307,18 +1314,53 @@ offset_bottom = -154.68
 text = "B"
 
 [node name="life1" type="Sprite2D" parent="."]
-position = Vector2(1323, 84)
-scale = Vector2(0.28719, 0.338983)
+position = Vector2(616, 72)
+scale = Vector2(0.217975, 0.252119)
 texture = ExtResource("4_1jl8v")
 
 [node name="life2" type="Sprite2D" parent="."]
-position = Vector2(1697, 84)
-scale = Vector2(0.299599, 0.315403)
+position = Vector2(710, 160)
+scale = Vector2(0.217981, 0.242447)
 texture = ExtResource("4_1jl8v")
 
 [node name="life3" type="Sprite2D" parent="."]
-position = Vector2(1505, 85)
-scale = Vector2(0.316116, 0.318856)
+position = Vector2(720, 73)
+scale = Vector2(0.224173, 0.227225)
+texture = ExtResource("4_1jl8v")
+
+[node name="life4" type="Sprite2D" parent="."]
+position = Vector2(830, 75)
+scale = Vector2(0.237181, 0.248408)
+texture = ExtResource("4_1jl8v")
+
+[node name="life5" type="Sprite2D" parent="."]
+position = Vector2(710, 268)
+scale = Vector2(0.230371, 0.235699)
+texture = ExtResource("4_1jl8v")
+
+[node name="life6" type="Sprite2D" parent="."]
+position = Vector2(612, 169)
+scale = Vector2(0.259297, 0.244174)
+texture = ExtResource("4_1jl8v")
+
+[node name="life7" type="Sprite2D" parent="."]
+position = Vector2(826, 170)
+scale = Vector2(0.232438, 0.237818)
+texture = ExtResource("4_1jl8v")
+
+[node name="life8" type="Sprite2D" parent="."]
+position = Vector2(611, 266)
+scale = Vector2(0.230372, 0.233581)
+texture = ExtResource("4_1jl8v")
+
+[node name="life9" type="Sprite2D" parent="."]
+position = Vector2(824, 273)
+scale = Vector2(0.207645, 0.220869)
+texture = ExtResource("4_1jl8v")
+
+[node name="life10" type="Sprite2D" parent="."]
+position = Vector2(931, 174)
+scale = Vector2(0.217975, 0.227225)
 texture = ExtResource("4_1jl8v")
 
 [node name="explosionSound" type="AudioStreamPlayer" parent="."]
@@ -1333,54 +1375,161 @@ frame = 10
 frame_progress = 0.435958
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1205.0
-offset_top = 380.0
-offset_right = 1758.0
-offset_bottom = 488.0
-theme_override_font_sizes/font_size = 40
+offset_left = 636.0
+offset_top = 437.0
+offset_right = 1189.0
+offset_bottom = 545.0
+theme_override_font_sizes/font_size = 25
 text = "Non-word letters remaining: "
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1126.0
-offset_top = 291.0
-offset_right = 1982.0
-offset_bottom = 346.0
-theme_override_font_sizes/font_size = 35
+offset_left = 570.0
+offset_top = 389.0
+offset_right = 1426.0
+offset_bottom = 444.0
+theme_override_font_sizes/font_size = 25
 text = "Click to remove the letters that don't belong!"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 1358.0
-offset_top = 699.0
-offset_right = 1610.0
-offset_bottom = 802.0
+offset_left = 58.0
+offset_top = 526.0
+offset_right = 203.0
+offset_bottom = 599.0
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[node name="quitScreen" type="Sprite2D" parent="."]
+[node name="exit" type="Button" parent="."]
 visible = false
-top_level = true
-position = Vector2(730, 346)
-scale = Vector2(3.63043, 2.26429)
+offset_left = 448.0
+offset_top = 503.0
+offset_right = 689.0
+offset_bottom = 582.0
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "QUIT"
+
+[node name="Bird1" type="Sprite2D" parent="exit"]
+position = Vector2(-219, -139)
+scale = Vector2(0.689066, 0.671598)
+texture = ExtResource("22_k6fvp")
+
+[node name="quitScreen" type="Sprite2D" parent="exit"]
+show_behind_parent = true
+position = Vector2(126, -164)
+scale = Vector2(8.81159, 5.06072)
 texture = ExtResource("22_42xi5")
 
-[node name="Label" type="Label" parent="quitScreen"]
-offset_left = -40.0778
-offset_top = -106.656
-offset_right = -0.0778198
-offset_bottom = -83.6562
-
-[node name="return" type="Button" parent="quitScreen"]
-offset_left = -40.0778
-offset_top = -106.656
-offset_right = 104.922
-offset_bottom = -75.6562
+[node name="return" type="Button" parent="exit"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -176.0
+offset_right = 364.0
+offset_bottom = -21.0
+theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Don't be a quitter
 "
 
-[node name="exit" type="Button" parent="quitScreen"]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Finger2" type="Sprite2D" parent="exit"]
+visible = false
+position = Vector2(-145, -169)
+scale = Vector2(1.24165, 1.6525)
+texture = ExtResource("24_6rfy5")
+flip_h = true
+
+[node name="haha" type="Label" parent="exit"]
+visible = false
+layout_mode = 0
+offset_left = -331.0
+offset_top = -407.0
+offset_right = 199.0
+offset_bottom = -365.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "That's what you get for trying to quit"
+
+[node name="win" type="Button" parent="."]
+visible = false
+offset_left = 319.0
+offset_top = 416.0
+offset_right = 854.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "PLAY MORE FUN GAMES"
+
+[node name="Sprite2D2" type="Sprite2D" parent="win"]
+show_behind_parent = true
+position = Vector2(227.5, -100)
+scale = Vector2(0.980096, 1.0142)
+texture = ExtResource("25_fbk66")
+
+[node name="Label" type="Label" parent="win"]
+layout_mode = 0
+offset_left = -286.0
+offset_top = -393.0
+offset_right = 1227.0
+offset_bottom = -310.0
+theme_override_font_sizes/font_size = 40
+text = "CONGRATULATIONS!! YOU BEAT MY WORDSEARCH!!!"
+
+[node name="Monke" type="Sprite2D" parent="win"]
+position = Vector2(214, -200)
+texture = ExtResource("26_f5i74")
+
+[node name="Thumb2" type="Sprite2D" parent="win"]
+position = Vector2(26, -123)
+texture = ExtResource("27_kvnb3")
+
+[node name="Thumb3" type="Sprite2D" parent="win"]
+position = Vector2(431, -110)
+texture = ExtResource("27_kvnb3")
+flip_h = true
+
+[node name="lose" type="Button" parent="."]
+visible = false
+offset_left = 382.0
+offset_top = 332.0
+offset_right = 763.0
+offset_bottom = 606.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "TRY AGAIN
+:("
+
+[node name="Dog" type="Sprite2D" parent="lose"]
+position = Vector2(-147, -99)
+texture = ExtResource("28_3n1kf")
+
+[node name="Thumb3" type="Sprite2D" parent="lose"]
+position = Vector2(-225, 19)
+rotation = -3.13656
+texture = ExtResource("27_kvnb3")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="lose"]
+show_behind_parent = true
+position = Vector2(165, -7)
+scale = Vector2(0.921178, 0.948864)
+texture = ExtResource("28_t626a")
+
+[node name="Label" type="Label" parent="lose"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = -233.0
+offset_right = 1543.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 60
+text = "So sorry"
+
+[node name="Orange" type="Sprite2D" parent="."]
+modulate = Color(1, 0.65098, 1, 0.686275)
+show_behind_parent = true
+position = Vector2(566.5, 327.5)
+scale = Vector2(0.90844, 0.916193)
+texture = ExtResource("25_fbk66")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
 
 [connection signal="loseLife" from="CrosswordBase/g" to="." method="_on_a_lose_life"]
 [connection signal="exploded" from="CrosswordBase/y" to="." method="_on_y_exploded"]
@@ -1533,5 +1682,10 @@ offset_bottom = 8.0
 [connection signal="exploded" from="CrosswordBase/z" to="." method="_on_y_exploded"]
 [connection signal="exploded" from="CrosswordBase/b7" to="." method="_on_y_exploded"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="quitScreen/return" to="." method="_on_return_pressed"]
-[connection signal="pressed" from="quitScreen/exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="exit/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="win" to="." method="_on_win_pressed"]
+[connection signal="pressed" from="lose" to="." method="_on_lose_pressed"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

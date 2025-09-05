@@ -1,5 +1,10 @@
 extends Node2D
 
+
+@onready var music = $music
+@onready var song = load("res://music/25 - jazz scat galore!.wav")
+
+
 @onready var h = $h
 @onready var a = $a
 @onready var l2 = $l2
@@ -83,6 +88,10 @@ t3:[word4,word5a],
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	music.stream  = song
+	music.play()
+	
 	$h.grab_focus()
 	highlightBox()
 
@@ -95,7 +104,8 @@ func _process(delta):
 		puzzleComplete = validatePuzzle()
 	
 	if(puzzleComplete):
-		print("YIPPEEE")
+		$win.disabled = false
+		$win.visible = true
 
 
 
@@ -306,3 +316,11 @@ func _on_g_3_pressed():
 func _on_g_pressed():
 	activeBox =$g
 	chooseActiveWord()
+
+
+func _on_win_pressed():
+	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_music_finished():
+	music.play()
