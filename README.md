@@ -1,6 +1,6 @@
 # A Collection of Fun Word and Number Games
 
-[Newgrounds](https://www.newgrounds.com/portal/view/996191), [Itch.io])(https://jowain.itch.io/a-collection-of-fun-word-and-number-games)
+[Newgrounds](https://www.newgrounds.com/portal/view/996191), [Itch.io](https://jowain.itch.io/a-collection-of-fun-word-and-number-games)
 
 This collection was made in **one week** for the University at Buffalo Game Development Club Spring Game Jam.
 The theme for this jam was "invert a game trope". So, we ran with the idea of turning very intelligent, calming thinking games from the New York Times, and turning them into overstimulating, overcomplicated clownlike games
