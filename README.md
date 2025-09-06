@@ -17,7 +17,10 @@ I made this game with my friend [Liza](https://github.com/elysy-dev), making thi
 
 # Technical Notes
 
-This project heavily utilized **object oriented programming principles** to make it not a total nightmare to develop. Wordsearch has ~150 button elements associated with it, BUT, they can be broken down into 2 distinct types: associated with a word, not associated with a word. So for these 150 buttons, I only really needed to make 2, and then I could just keep instantiating them and giving each child different letters to display.
+This project heavily utilized **object oriented programming principles** to make it not a total nightmare to develop.
+  * Wordsearch has ~150 button elements associated with it, BUT, they can be broken down into 2 distinct types: associated with a word, not associated with a word. So for these 150 buttons, I only really needed to make 2, and then I could just keep instantiating them and giving each child different letters to display.
+
+    * This was done for the connections as well. I think OOP is awesome and should always be used when possible, but it is particularly useful when under a time crunch
 
 In general, keeping a solid hierarchy for all of my scenes was crucial for a smooth development process, since almost everything on the screen is a ui element and needs to be in proportion with the other ones. I did NOT do this for the crossword which made me very sad when I had to resize all of the ui elements... I had to do it all individually.
 
